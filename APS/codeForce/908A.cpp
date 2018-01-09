@@ -1,4 +1,3 @@
-#include <cstdio>
 #include <string>
 #include <iostream>
 #include <cctype>
@@ -9,7 +8,7 @@ int main(){
   cin >> s;
   int res = 0;
   string vowls = "aeiou";
-  for(int i = 0; i < s.length();i++){
+  for(int i = 0; i < s.length(); i++){
     if(isalpha(s[i])){
       if(vowls.find(s[i]) != string::npos){
 	res++;
@@ -21,8 +20,8 @@ int main(){
       }
     }
   }
+  
   cout << res << endl;
-
 
   return 0;
 }
