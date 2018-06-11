@@ -6,10 +6,12 @@
 
 
 
-* 2018/6/11
-** What I have done 
-*** Its sub task 
-** another task 
 
+* 2018/6/11
+** Learn and setup git on my machine 
+*** sudo -u excalior command , execute this command as user excalior :Knowledge:   
+** Learn to use org-mode
+*** [[http://www.cnblogs.com/Open_Source/archive/2011/07/17/2108747.html#sec-1][Brief Tutorial of Org-mode]] :Link: 
+*** [[http://www.fuzihao.org/blog/2015/02/19/org-mode%25E6%2595%2599%25E7%25A8%258B/][Very Brief Tutorial of Org-mode]] :Link: 
 * 2018/6/7
 ** Previously done things 
