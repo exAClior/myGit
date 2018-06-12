@@ -3,3 +3,5 @@
 * Lesson 1
 ** [[https://developer.mozilla.org/en-US/docs/Web/HTML/Element][Reference HTML]] 
 ** Everything in HTML is represented like a tree 
+** In <head> part of HTML, you can also include CSS file, Javascript files and also keywords
+

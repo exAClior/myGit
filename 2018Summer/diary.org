@@ -10,8 +10,12 @@
 
 
 
+* 2018/6/13
+** Continue HTML practise
+
 * 2018/6/12
 ** Learn front end web development on udemy 
+** 
 * 2018/6/11
 ** Learn and setup git on my machine 
 *** sudo -u excalior command , execute this command as user excalior :Knowledge:   
