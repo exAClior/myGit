@@ -1,12 +1,17 @@
 # +TITLE My diary for daily accomplishment since 2018/6/11
+* TODO Learn to be a bug bounty hunter
+** TODO Learn HTML , CSS, and Javascript 
+** TODO Read Webhacking 101
+** TODO 
 * TODO Review Emacs tutorial 
 * TODO Figure out how to user Burp Proxy  
-* TODO Learn HTML on edx 
 * TODO Learn git 
 
 
 
 
+* 2018/6/12
+** Learn front end web development on udemy 
 * 2018/6/11
 ** Learn and setup git on my machine 
 *** sudo -u excalior command , execute this command as user excalior :Knowledge:   
