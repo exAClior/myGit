@@ -13,7 +13,7 @@
 
 
 * 2018/6/13
-** I am very confused about the magit commit and push stuff, so is the spacemacs theme stuff 
+** I am pretty happy about the theme I set up. Cool stuff 
 ** Continue HTML practise
 
 * 2018/6/12

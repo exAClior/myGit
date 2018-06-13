@@ -4,4 +4,11 @@
 ** [[https://developer.mozilla.org/en-US/docs/Web/HTML/Element][Reference HTML]] 
 ** Everything in HTML is represented like a tree 
 ** In <head> part of HTML, you can also include CSS file, Javascript files and also keywords
+** image element don't need closing tag, these are "VOID ELEMENTS"
+** the same Class can be added to multiple elements, but ID cannot  
+** Can set multiple classes to the same element, but class names have to be seperated by spaces 
+*** E.g: class="hight dick pieces", these are three different class names for the same element
+** [[https://css-tricks.com/almanac/][CSS Reference 1]] , [[https://developer.mozilla.org/en-US/docs/Web/CSS/Reference][CSS Reference 2]]
+** [[https://developers.google.com/web/tools/chrome-devtools/][Chrome Dev Tool Tutorial]], [[https://developer.mozilla.org/en-US/docs/Tools][Firefox Dev Tool Tutorial]]
+
 
