@@ -10,5 +10,7 @@
 *** E.g: class="hight dick pieces", these are three different class names for the same element
 ** [[https://css-tricks.com/almanac/][CSS Reference 1]] , [[https://developer.mozilla.org/en-US/docs/Web/CSS/Reference][CSS Reference 2]]
 ** [[https://developers.google.com/web/tools/chrome-devtools/][Chrome Dev Tool Tutorial]], [[https://developer.mozilla.org/en-US/docs/Tools][Firefox Dev Tool Tutorial]]
-
+** Use font-family to sepcify a group of possible fonts to be used for an element.
+*** Need a group because some fonts might not be available on some os or browser
+** make CSS into a stylesheet and use it for multiple websites
 
