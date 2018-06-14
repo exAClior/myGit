@@ -1,0 +1,4 @@
+# +TITLE This is the note for Intro to Javascript 
+
+* Attaching a closure to a Document Object Model element can create a circular reference and thus, a memory leak
+** I am still confused about this 
