@@ -2,3 +2,6 @@
 
 * Attaching a closure to a Document Object Model element can create a circular reference and thus, a memory leak
 ** I am still confused about this 
+* use "===" for strict comparison , it takes data type into consideration 
+* List of all falsy values in JS:
+** false, null, undefined, 0 and anything equal to it, "", and NaN
