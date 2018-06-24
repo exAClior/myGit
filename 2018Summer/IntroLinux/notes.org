@@ -1,0 +1,25 @@
+# +TITLE: This is the note for online course on Edx about Intro to Linux 
+
+* To redirect stderr's output into another file:   
+** do_something 2> error-file 
+** 2 because it is the file descriptor of stderr
+* To put the output of stderr and stdout into the same file
+** do_something > all-output-file 2>&1
+** do_something >& all-output-file 
+* For pipes, the latter commands don't have to wait for the previous ones to finish in order to start
+** This implies although the latter commands use output of previous as input, they must have some other input they can use and start computing 
+** Plus: this saves I/O of output on disk, which is very slow
+** Form : command1 | command2 | command3
+* While searching for files
+** ls ba?.cpp : gives all files whose third character can be anything
+** ls ba*.cpp : gives all files whose third to nth character can be anything
+** Similarily replace */? with [set of char] or [！ set of char] 
+*** A set of char can be in the form of [a-n]
+* To use find 's result and execute other commands
+** find -name "?????" -exec rm {} ';'
+*** {} is there in place of the location of file provided by output of find
+*** can also replace -exec with -ok
+*** ';' is equal to "\;" which end the command 
+*** You can also seach files by parameters like -ctime -size , see for detail in manual
+* Useful link for Basic Packagaing Commands
+** [[https://prod-edxapp.edx-cdn.org/assets/courseware/v1/f478e1c28b54f5df1d53ef1bc855b2e3/asset-v1:LinuxFoundationX+LFS101x+1T2017+type@asset+block/Basic_Packagaing_Commands.pdf][Commands]]

@@ -1,0 +1,6 @@
+# +TITLE: This is the note for online course on Edx about Intro to Linux 
+
+* To redirect stderr's output into another file:   
+** do_something 2> error-file 
+** 2 because it is the file descriptor of stderr
+ 
