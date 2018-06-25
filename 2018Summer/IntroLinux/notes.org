@@ -23,3 +23,25 @@
 *** You can also seach files by parameters like -ctime -size , see for detail in manual
 * Useful link for Basic Packagaing Commands
 ** [[https://prod-edxapp.edx-cdn.org/assets/courseware/v1/f478e1c28b54f5df1d53ef1bc855b2e3/asset-v1:LinuxFoundationX+LFS101x+1T2017+type@asset+block/Basic_Packagaing_Commands.pdf][Commands]]
+* Useful commands for finding documentation
+** man command
+** command --h 
+** info (No search is available here)
+** yelp man:cat
+*** search for man about cat in a graphical help system
+* Can use the following commands to look up document
+** man command
+** info 
+** command --h
+** yelp man:command
+* Zombie State
+** Sometimes a child process finished but the parent process does not ask for its state. The child process is then a zombie process
+** Scheduling in a quantum computer might be tricky, b/c allocating the ions for computation means to store previous results on disk, this is going to be really expensive comparetively. 
+* Processes that runs in background has a lower priority 
+* The command "jobs" shows all jobs that runs in background
+* make sure you provide -9 flag for command: kill
+* command: top is the real time version of ps
+** pressing certain keys under top, can renice or kill a process
+* Use command : at to schedule tasks to be done in the future
+* cron can do just the same but can repeat the command periodically 
+* Sleep puts command to sleep
