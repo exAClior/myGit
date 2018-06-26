@@ -45,3 +45,10 @@
 * Use command : at to schedule tasks to be done in the future
 * cron can do just the same but can repeat the command periodically 
 * Sleep puts command to sleep
+* You may setup a NFS on server then share all files across all clients
+** sudo systemctl start nfs
+*** This command is used to start nfs, modify /etc/exports to let nfs know which files you are sharing and which permissions you are giving clients
+** similiar things can be done on the client side 
+*** Change things under /etc/fstab to automatically mount things upon system boot
+*** Then you do sudo mount ......etc
+
