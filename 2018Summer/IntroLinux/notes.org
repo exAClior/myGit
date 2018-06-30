@@ -51,4 +51,8 @@
 ** similiar things can be done on the client side 
 *** Change things under /etc/fstab to automatically mount things upon system boot
 *** Then you do sudo mount ......etc
-
+* files under /proc are not real files , but only information about the system 
+* same is /dev it contains pseudo-file created by udev that represents hardware devices
+* /var contains files that changes size and content as system runs eg: system log, print queue
+* /etc contains system-wide configuration files
+* /boot contains files needed to boot the system
