@@ -12,6 +12,28 @@
 
 
 
+* 2018/8/4 
+** it seems to indicate that html would automatically identify and simplify regex
+** [[https://github.com/matachi/MaTachi.github.io/blob/master/src/pages/solutions-to-the-wargame-xss-challenges-at-xss-quiz-int21h-jp.md%20][XSS challenge answers]]
+* 2018/8/3  
+** the same origin policy for IE is different in the sense that it omits port 
+** when try to allow subdomain to access parent domain, set "document.domain" in both domains to be the parent domain, otherwise error will occur
+** [[https://blog.csdn.net/zhangshuang92/article/details/54407229/][Use a tag to run js]]
+** [[https://www.cnblogs.com/zichi/p/run-innerHTML-script.html][How to run script in innerHTML]]
+
+** [[https://www.w3schools.com/jsref/event_onchange.asp][Use onchange of <select> to execute js]]
+** somehow, the inspect element option when you right click on web page allows you to change content of the page
+** thing like "onerror" "onchange" is called events
+** it is not an requirement to put quotes on attribute value in HTML
+* 2018/8/1  
+  Same origin: if has the same protocol, host and port 
+* 2018/7/30
+* 2018/7/16 
+** Possible research professors:
+*** Dmitri Averin
+***  Eden Figueroa http://qit.physics.sunysb.edu/new/ 
+*** Tzu  http://insti.physics.sunysb.edu/~twei/Publications.html
+*** Vladimir Korepin
 * 2018/6/15
 ** study Javascript on Udacity 
 * 2018/6/14 
