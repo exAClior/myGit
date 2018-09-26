@@ -5,4 +5,6 @@
 ** Start logging daily learning 
 ** Learn HTML on Codeacademy
 *** <span> tag works kind of like a text style changer within an element like <p>  
-
+*** the attribute "alt" is used to put a desciption to the image , that way people who cannot load the image can view descriptions
+**** The alt also can be used by crawler of search engines that way, alt can improve the ranking of my site.
+*** For video, you need both opening and closing tags. The text in between the texts will be displayed if the browser do not support video.
