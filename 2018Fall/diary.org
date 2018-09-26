@@ -1,0 +1,8 @@
+# +TITLE:Start logging online learning progress
+
+
+* 2018/9/25
+** Start logging daily learning 
+** Learn HTML on Codeacademy
+*** <span> tag works kind of like a text style changer within an element like <p>  
+
