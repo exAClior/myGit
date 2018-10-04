@@ -1,6 +1,16 @@
 # +TITLE:Start logging online learning progress
 
 
+* 2018/9/28
+** Learn to make HTML5 GAME on Udemy (excited) 
+*** Firstly, need to install XAMPP to run localhost
+**** To install .run files on Ubuntu, first change its permission then ./xxx.run
+* 2018/9/26
+** Learn HTML on Codeacademy
+*** When inserting a hyperlink, there are multiple ways to open this link in.
+**** use attribute  "target" to control this behavior 
+**** "_self" opens in current tab, "_blank" new tab, "_parent" the tab which opened this tab , "_top" the earliest parent that open this tab
+**** If there is no parent, open in "_self"
 * 2018/9/25
 ** Start logging daily learning 
 ** Learn HTML on Codeacademy
