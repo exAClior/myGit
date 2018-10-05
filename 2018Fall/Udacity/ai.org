@@ -1,0 +1,44 @@
+# +Learning notes for ai on udacity
+
+* <2018-10-04 Thu>
+** Integer and Floats
+*** Use type(x) to look up the type of a variable
+*** use int(x) to cast x into a data type
+*** 
+* <2018-10-03 Wed>
+** Arithemetic operator 
+*** to take power, use "**"
+*** ^ does bitwise xor
+*** "//" integer division, rounds the answer down 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
