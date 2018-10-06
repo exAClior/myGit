@@ -1,10 +1,37 @@
-# +Learning notes for ai on udacity
+#+TITLE Learning notes for ai on udacity
 
+* <2018-10-05 Fri>
+** Lists and Membership Operators
+*** If you use index -1 you get the last item, -2 second to last
+*** let q3 be a list q3[3:6] slices 
+*** python list can contain a mix of different data types
+*** use key word "in" "not in" to determine whether a data is in a list or not
+*** List is a mutable data strucvture  type but string is not
+*** the other important quality is whether a data structure type is ordered or not
+*** ordered or not depends on whether we can use the position of the element in a data structure to access them
+** List Methods
+*** Lists are likely to be pass by reference since one list which are pointed by two different variable names are mutated at the same time when one varies
+*** for string, max operator compares the alphabetical order
+*** sorted() sorts the data structure
+*** string.join(..) joins string elements together connecting them with the string on which join is called upon
+** Tuples
+***  Like list but are immutable and ordered
+** Sets
+***  Unordered and unique elements, can create set from lists using set(list_name)
+*** pop()
+** Dictionary
+*** store key and value pair
+*** use "in" or ".get()" to check if a key is in the dict
 * <2018-10-04 Thu>
 ** Integer and Floats
 *** Use type(x) to look up the type of a variable
 *** use int(x) to cast x into a data type
 *** 
+** String
+*** String in python is immutable
+*** + to combine string
+*** * to multiply string
+*** format() can be used to print designated outputs 
 * <2018-10-03 Wed>
 ** Arithemetic operator 
 *** to take power, use "**"
