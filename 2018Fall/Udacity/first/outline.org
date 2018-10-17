@@ -1,0 +1,15 @@
+#+TITLE: The outline and resuirement of first project
+
+* Reuqirement
+** Identify if dog or not
+
+** Identify which dog
+   
+** Choose from three models, which does best
+
+** Determine which does more correctly and in relatively small time
+
+*** TODO develope algorithm , 
+    if with different time, yield same amount of correct data, 
+    should consider to be equally good model? Correct rate? 
+* Mostly only need to modify check_image.py 

@@ -22,7 +22,13 @@
 ** Jupyter note book 
 
 *** Literate programming 
-    documentation is written as a narrative alongside the code 
+    documentation is written as a narrative alongside the code
+
+*** How notebooks work 
+    server renders notebook file and then send it via http&websockets to user
+    the code part of the notebook is sent to the kernel
+    kernel can not only interprete one language but many 
+    
 * <2018-10-16 Tue>
 
 ** Create one environment to each project 

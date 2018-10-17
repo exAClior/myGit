@@ -1,4 +1,4 @@
-# +TITLE:Start logging online learning progress
+#+TITLE: Start logging online learning progress
 
 
 * 2018/9/28
