@@ -22,7 +22,76 @@
 ** Jupyter note book 
 
 *** Literate programming 
-    documentation is written as a narrative alongside the code 
+    documentation is written as a narrative alongside the code
+
+*** How notebooks work 
+    server renders notebook file and then send it via http&websockets to user
+    the code part of the notebook is sent to the kernel
+    kernel can not only interprete one language but many
+
+*** jupyter short cuts
+    shift+tab to have function documentation
+    shift+tab continutously twice to bring up help document
+
+*** Markdown cell style 
+    Use #, or ##, or ### before text for different size of header
+    [Text] (URL)
+    _text_ or *text* to italics
+    __text__ or **text** for bold 
+    wrap code around with '''   '''
+    or indent all code with 4 spaces
+    For math block , wrap the entire block with $$  $$, then follow latex rules
+    For math equation, wrap the equation with $ $
+    
+    [[https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet][Cheat sheet]]
+
+*** Short cuts
+    use Y to make a block code 
+    use M to make a block markdown 
+    use H to call out the help menu 
+    use L to turn on and off code line number
+    use D D to delete a cell
+    shift + control + p to access control palette
+
+*** Magic keywords
+    gProbably only works in python kernel mode
+    % magic word works for a line 
+    %% magic word works for a cell
+    example of magic word : timeit , times the code 
+    The use of matplotlib inline to render a plot is not very clear, read more while coding 
+    %pdb for debugging
+    [[https://ipython.readthedocs.io/en/stable/interactive/magics.html][Magic word list]]
+
+*** Convert notebooks
+    use jupyter nbconvert --to file_format ipynb_file_name
+    convert ipynb file into other format, because ipynb is json, so 
+    jupyter nbconvert notebook.ipynb --to slides : convert to slides
+    jupyter nbconvert notebook.ipynb --to slides --post serve : convert to slides and then serve
+
+** Intro to Numpy
+
+*** Why numpy
+    numpy is faster than plain python if you use built in function in numpy
+    numpy arrays can only hold one type of data at a time
+
+***  Creating and saving numpy ndarrys
+     np.array does up casting if the elements in the array are some ints and some floats to keep calculation precession
+     x = np.array([1.5, 2.2, 3.7, 4.0, 5.9], dtype = np.int64) : assigns specific data type to the array
+     np.save('my_array', x) : saves the ndarray 
+     y = np.load('my_array.npy') : loads the ndarray
+
+*** Use built-in functions to create ndarrays
+    np.eye create identity matrix
+    np.diag, create diagonal matrix
+    np.full create array with specific dimension with specific value 
+    np.arange create a linear array
+    np.linspace require both start and end points
+    np.reshape convert rank 1 array to another rank 2 array
+    np.random.random ,random float nubmer array with specific shape
+    np.random.randint ,
+    np.random.normal, array with specific shape whose values follow normal distribution with specified distribution property
+    np.zeros() creates zero array
+    np.ones()
 * <2018-10-16 Tue>
 
 ** Create one environment to each project 
