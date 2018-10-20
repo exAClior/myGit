@@ -1,7 +1,52 @@
 #+TITLE: Learning notes for ai on udacity
 
 * <2018-10-20 Sat>
-  
+
+** Why use Pandas
+   to analyze your data set, such that it matches your machine learning algo's
+   requirement
+
+** Creating Pandas Series
+
+*** To import 
+    import pandas as pd 
+
+*** To create 
+    var = pd.Series(data, index)
+
+*** What is a series 
+    one d array that holds many data types
+
+***  series special points
+     index of series do not just have to be numbers, they can be strings
+     much like in a dictionary
+
+*** What meta data about a series 
+    var.shape 
+    var.ndim : how many dimension
+    var.size : how many elements in there 
+    var.values
+    var.index
+
+** Access and deleting elements in pandas series
+
+***  access through both index or number index 
+     var[0] will return the first data in the series 
+     but when there is ambiguity, i.e , when the index itself is also int
+     use var.loc[index] to access via index 
+     use var.iloc[int index] to access via integer index , i.e like a normal array
+
+***  delete item 
+     var.drop(index) : deletes the index withouth modifying original series
+     and returns a modified array 
+     var.drop(index, inplace  = True), modifies the original series
+
+** Arithmetic Operations on pandas series
+
+*** arithmetic operations 
+    works just like in an ndarray in numpy
+    but you have to take care that the operation you do must be compatible with 
+    all data types in that series 
 * <2018-10-19 Fri>
 
 ** Slicing ndarrays 
