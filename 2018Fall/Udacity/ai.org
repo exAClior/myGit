@@ -1,5 +1,45 @@
 #+TITLE: Learning notes for ai on udacity
 
+* <2018-10-19 Fri>
+
+** Slicing ndarrays 
+   X[start:end]
+   X[start:]
+
+*** Slicing only creates a new label -> the variable name, but not a new ndarray
+    to create a new nparray, use copy()
+
+***  to get diagonal 
+     use np.diag(ndarray, k = N)
+     N is the number of element above or below the diagonal
+
+***  to get unique elements in the array
+     np.unique
+
+***  np.sort(x)
+     leaves x unchanged
+
+***  x.sort()
+     changes the array x itself
+
+***  access elements in an array that satsifies a boolean expression
+     place the boolean expression in the index part
+     eg: x[ bool expression]
+     
+*** np.sort(x,axis = ?)
+    sort rank 2 arrays, the axis argument tells the program 
+    whether to sort everything row wise or column.
+
+** Arithmetic operations and Broadcasting
+
+*** broadcasting 
+    it allows you to do arithmetic operations of smaller size arrays
+    to bigger ones
+    behind the scene, python broadcasts the smaller array/ number into the same
+    shape as the larger one 
+    [[https://docs.scipy.org/doc/numpy-1.13.0/user/basics.broadcasting.html][broadcasting rules]]
+
+***  numpy also has awesome functions that obtian stats info of an ndarray 
 * <2018-10-17 Wed>
 
 ** using anaconda
@@ -92,6 +132,13 @@
     np.random.normal, array with specific shape whose values follow normal distribution with specified distribution property
     np.zeros() creates zero array
     np.ones()
+
+*** Accessing, Deleting and Inserting into ndarrays 
+    use np.delete()
+        np.insert()
+	np.append()
+	np.vstack() stack one array above another
+	np.hstack() stack one array horizontally 
 * <2018-10-16 Tue>
 
 ** Create one environment to each project 
