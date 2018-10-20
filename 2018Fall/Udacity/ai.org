@@ -1,5 +1,7 @@
 #+TITLE: Learning notes for ai on udacity
 
+* <2018-10-20 Sat>
+  
 * <2018-10-19 Fri>
 
 ** Slicing ndarrays 
