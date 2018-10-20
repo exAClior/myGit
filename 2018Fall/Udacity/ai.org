@@ -46,7 +46,111 @@
 *** arithmetic operations 
     works just like in an ndarray in numpy
     but you have to take care that the operation you do must be compatible with 
-    all data types in that series 
+    all data types in that series
+
+** Creating Pandas Dataframes
+  
+*** what is a dataframe
+    it is like a spreadsheet in excel 
+    
+*** How to create  
+   pd.DataFrame(item)
+   item is in the form of dictionary of pd Series
+   the row indices will be the union of two indexs,
+   for the item that does not contain some index, we will palce NaN as the value
+
+**** What if we do not have index
+     pandas use 0 ,1 ,2 .... as default value
+
+**** What if we want to create only part of that dict
+     bob_shopping_cart = pd.DataFrame(items, columns=['Bob'])
+     bob_shopping_cart = pd.DataFrame(items, columns=['Bob'])
+     specify which item or index in the dict you want to create from
+
+**** What if we want to specify row index oursleves
+     df = pd.DataFrame(data, index = ['label 1', 'label 2', 'label 3'])
+
+**** What if we want to create DataFrame via a list of dictionaries 
+     dictionary keys will be the column indices 
+     row indices will not be defined, so default values kicks in
+
+** Access and adding elements in DataFrame
+
+*** Access
+    var[ [list of column labels] ]
+    var.loc[ [list of row labels] ]
+    var[column index][row index] to access single element 
+    Alert: column always have to be places in front of row
+
+*** Adding
+
+**** To add new column 
+     var['new_label'] = [list of data]
+
+**** Add new column via adding up other columns 
+     var['new_label'] = var['old_label_1'] + var['old_label_2']
+
+**** To add new row
+     First create new DataFrame 
+     then use old_frame.append()
+
+**** To add new column that is part of the existing column at the end
+     store_items['new watches'] = store_items['watches'][start:end]
+
+**** To insert new column anywhere
+     dataframe.insert(loc,label,data)
+     note the location starts at 0 which in the row labels
+
+**** To remove items
+
+***** pop('column_index') 
+      deletes columns
+
+***** drop(['index'], axis = 0/ row, 1 / column)
+      deletes both rows and columns
+
+**** To rename label 
+     store_items = store_items.rename(columns = {'bikes': 'hats'}) : changes column
+     store_items = store_items.rename(index = {'store 3': 'last store'}) : changes row
+     store_items = store_items.set_index('pants') : set row index to be data in a column
+
+** Deal with NaN value
+
+*** Detect and count
+
+**** .isnull() 
+     returns the same shape of data that indicates whether each place is null or not by a boolean 
+     use multiple .sum() to count how many True (which means is NaN) there is in the entire DataFram
+     each .sum() reduces the dimensionality of the DataFrame by 1
+
+****  .count() 
+      counts the non-NaN values
+
+****  .drop(axis = 0/row , 1 /column, inplace = boolean )
+      delete all columns or rows that contains NaN
+      notice this does not modify the original DataFrame by default, if want change the inplace value
+
+****  .fillna(value)
+      fill all NaN with value provided
+
+****  .fillna(method = 'ffill', axis = 0 /column, 1 / row )
+      fille NaN with the value before them along the axis specified
+
+****  .interpolate(method = 'linear', axis = )
+
+** Loading Data into a Pandas DataFrame
+
+***  To load CSV file 
+     pd.read_csv('file_name')
+
+*** General Information
+    file_name.tail(N) : last N rows is displayed
+    file_name.head(N) : first N rows is displayed
+    file_name.isnull().any() : check if any column had NaN values
+    file_name.describe() : gives statistical description on some data
+    file_name['column index'].describe() : describes a single column
+    file_name.groupby() : collects data that has the same data in some columns 
+    and then form a new DataFrame and does calculation on them
 * <2018-10-19 Fri>
 
 ** Slicing ndarrays 
