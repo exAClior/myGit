@@ -19,6 +19,63 @@
      sb.countplot(data = variable_data, x/y = 'column_name')
      use [[https://pandas.pydata.org/pandas-docs/stable/generated/pandas.api.types.CategoricalDtype.html][pandas.api.types.CategoricalDtype]] to generate an order categorical data 
      type made up of column names
+     use plt.xticks(rotation = degrees) to rotate the x labels
+
+** How to create Relative Frequency 
+   one way is to change the label for frequency counts by manually calculating the 
+   max frequency of one label on the other axis
+   plt.yticks(values on y axis, label on that pos on y axis)
+
+
+*** To maintain some sort of order 
+    var_order = df['type_string'].value_counts().index
+    returns a list of indexs for each row that are sorted by "type_string' value
+
+***  Or you may display the percentage on each bar 
+     use the matplotlib.pyplot.text() function
+** Count missing data
+
+***  use seaborn.barplot() see documentation for specific use
+     this is for the use of summarized data, in other words
+     necessary stats info is already gathered
+
+** Pie Chart
+   Show how data group proportion distribution is broken down into
+   data group is no more than 4
+   plt.pie(sorted_counts, labels = sorted_counts.index, startangle = 90,
+        counterclock = False);
+   note, the data 'sorted_counts' need to be already summarized
+   wedgeprops = {'width' : 0.4} -> argument in pie() that removes the core
+   of the pie and thus creating a pie chart
+
+** Histogram,
+   it is like probability distributions
+   sb.hist()
+   change bin size either by providing a single value or a list of 
+   equally spaced numbers
+
+*** distplot 
+    plots the distribution plot by default
+
+** Figures , Axes, and Subplots
+
+***   How a graph is drawn in matplotlib
+      first you need to create figure object, then you create axes object, finally 
+      you plot the graph in axes
+
+***  To create axes 
+     use add_axes()
+     to use this axes, in countplot(...., ax = ax )
+     plt.gca() get current axes
+     fig.get_axes() get the list of axes
+     fig.add_subplot()  approximately equal to plt.subplot() 
+     plt.subplots() create multiple subplots
+
+** Choosing a plot for discrete data
+
+***  use rwidth parameter with plt.hist() 
+     plot bars separately 
+     
 * <2018-10-20 Sat>
 
 ** Why use Pandas
