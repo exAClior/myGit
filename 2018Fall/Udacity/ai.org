@@ -74,8 +74,17 @@
 ** Choosing a plot for discrete data
 
 ***  use rwidth parameter with plt.hist() 
-     plot bars separately 
-     
+     plot bars separately
+
+**  Descriptive Stats, Outliers, AXis Limits
+
+***  plt.xlim({a,b}) 
+     zooms in to the histogram
+
+** Scales and Transformations
+
+***  log-normal distributed
+     when the value is taken the log, the distribution is normally distributed
 * <2018-10-20 Sat>
 
 ** Why use Pandas
