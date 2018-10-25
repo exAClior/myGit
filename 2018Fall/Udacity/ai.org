@@ -1,5 +1,24 @@
 #+TITLE: Learning notes for ai on udacity
 
+* <2018-10-24 Wed>
+
+**  Tidy data
+
+*** Def
+    each variable is a column
+    each unit of observation is a row
+    the observations of same units form a table
+
+** Bar chart
+
+***  depict the distribution of a categorical variable
+
+***  we use matplotlib and seaborn to visualize data
+
+***  countplot() to plot bar chars
+     sb.countplot(data = variable_data, x/y = 'column_name')
+     use [[https://pandas.pydata.org/pandas-docs/stable/generated/pandas.api.types.CategoricalDtype.html][pandas.api.types.CategoricalDtype]] to generate an order categorical data 
+     type made up of column names
 * <2018-10-20 Sat>
 
 ** Why use Pandas
