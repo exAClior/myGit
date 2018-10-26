@@ -1,5 +1,8 @@
 #+TITLE: Learning notes for ai on udacity
 
+* <2018-10-25 Thu>
+
+**  Scales and Transformations continuted 
 * <2018-10-24 Wed>
 
 **  Tidy data
