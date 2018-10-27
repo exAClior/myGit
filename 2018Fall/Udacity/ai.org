@@ -42,7 +42,15 @@
    seaborn.boxplot()
 
 ** Cluster Bar Charts 
-   
+   seabon.heatmap()
+   countplot() can also differentiate two different subgroup with in each column
+   just provide with 'hue' parameter
+
+** Faceting 
+   different subset of data , create same kind of plot 
+   remember to fix axes to be the same for these plots 
+   g =  sb.FacetGrid()
+   g.map () to determine what plot you need to do 
 * <2018-10-25 Thu>
 
 **  Scales and Transformations continuted 
