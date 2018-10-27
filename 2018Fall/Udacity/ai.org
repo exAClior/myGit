@@ -1,5 +1,48 @@
 #+TITLE: Learning notes for ai on udacity
 
+* <2018-10-26 Fri>
+
+**  scatterplots and correlation
+
+***  correlation
+     Pearson coefficient : r , how one variable changes w.r.t another
+
+***  use of functions
+
+****  scatter()
+      plt.scatter(data = , x = , y = )
+
+****  regplot()
+      sb.regplot(data , x = , y = ) plots with regression line
+
+** Overplotting Transparency and Jitter
+
+***  Problem
+****  Too many data points, the plot is now just a blob. 
+      We sample part of the data and add transparency to the data dots 
+
+**** Jitter
+     When data points overlap and they take discrete values
+     add random noise to their position in graph
+     Too add transparency setting to regplot , need to pass it as one element
+     of a dictionary of the variable scatter_kws
+
+**  Heat Map
+    Color denotes how many data points is in an area in the plot 
+    hist2d() 
+    keep an eye to the bin size
+
+**  Violin Plots
+    qualitative vs quantitative data 
+    curve for each categorical group 
+    seaborn.violonplot()
+
+** Box plot 
+   depicts outlier, max, q3 , median , q1 and min from top to bown 
+   seaborn.boxplot()
+
+** Cluster Bar Charts 
+   
 * <2018-10-25 Thu>
 
 **  Scales and Transformations continuted 
