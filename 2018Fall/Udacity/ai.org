@@ -1,5 +1,41 @@
 #+TITLE: Learning notes for ai on udacity
 
+* <2018-10-27 Sat>
+
+** Adaptation of Univariate Plots
+
+*** use of barplot 
+    instead of the counts we plot the mean of a value 
+    we may also add error bars
+
+*** Use of pointplot 
+    if do not like bars, can use plot points to make things clear
+
+*** adapted histogram 
+    by changing the weight of each element can plot the density instead of count
+
+**  line plots 
+    want to emphasis the connection between change of one variable versus another 
+    e.g stock value against time 
+    use errorbar() note, need to sort the x values
+
+***  Group continuous x variables 
+     use bin edges 
+     pd.cut()
+     datafram.groupby()
+
+***  may also achieve by using the rolling method in pandas' rolling window
+
+[[https://stackoverflow.com/questions/20144529/shifted-colorbar-matplotlib][Good Color Map Reference]]
+
+** Swarm plot
+   same result of jittering , but the displacement is not random
+   place dots as close to their original value as possible without overlap
+
+** Rugplot
+   displace density of points on axes
+
+** Stripplot like 
 * <2018-10-26 Fri>
 
 **  scatterplots and correlation
@@ -14,7 +50,7 @@
 
 ****  regplot()
       sb.regplot(data , x = , y = ) plots with regression line
-
+  
 ** Overplotting Transparency and Jitter
 
 ***  Problem
