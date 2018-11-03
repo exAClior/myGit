@@ -1,5 +1,39 @@
 #+TITLE: Learning notes for ai on udacity
 
+
+* <2018-11-03 Sat>
+
+**  Artificial Neural Network
+    Has three types of layers
+    input layer , only 1
+    output layer, only 1
+    hidden layer, can have many 
+    Note: numbers of input neurons , output neurons, and internal neurons can be different
+
+**  How are Neurons Connected 
+    each neuron on layer x is connected to all neurons on layer x+1
+    the connecting lines have weights, these weights made up a weight matrix
+
+**  How to train
+    we adjust the weight matrices so that the output layer is as close as we want 
+    based on information from the training data sets
+    This optimization process could be broken down into two general steps 
+** The feedforward process 
+* <2018-11-02 Fri>
+
+**  Linear Transformation 
+    For a transformation to be linear, the origin has to stay there and 
+    all the grid lines and diagonal lines in original coordinate 
+    system has to remain staight lines
+
+**  transformation matrix
+    the first column is where the x hat will be after transformation
+    the second is where y hat will be
+    can be generalized into higher dimension I believe
+
+* <2018-10-30 Tue>
+
+**  
 * <2018-10-27 Sat>
 
 ** Adaptation of Univariate Plots
