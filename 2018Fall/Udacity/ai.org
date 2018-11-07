@@ -1,6 +1,35 @@
 #+TITLE: Learning notes for ai on udacity
 
 
+* <2018-11-06 Tue>
+
+** There is a radius of convergence for Taylor series out of which the 
+   Taylor series do not be the same as the original function
+
+**  What is a Neural Network
+    Neuron, a thing that holds a number between 0 and 1, the number represen the activation
+
+**  How to normalize the weighted sum, 
+    use sigmoid function
+
+**  How to train data
+    Use gradient descent
+
+**  Backpropagation 
+    How we compute the gradient
+
+***  We know what the current results are , and we know what change we should  have 
+     in the previous layer of neurons, so we adjust weight accordingly 
+     Or we change the activation of the previous layer neurons
+
+***  You average all the nudges we need to weights and activations and every sample 
+     this is the negative of the gradient
+
+*** Stochastic backpropagate 
+    randomly divide data groups into sub-batches , do backpropagate on each group
+    to determine only one step in the gradient descent to the local min
+
+**  Intro to Neural Networks
 * <2018-11-03 Sat>
 
 **  Artificial Neural Network
