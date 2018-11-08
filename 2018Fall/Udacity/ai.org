@@ -1,6 +1,28 @@
 #+TITLE: Learning notes for ai on udacity
 
 
+* <2018-11-07 Wed>
+
+**  Perceptron trick
+    How to move the line closer to a point. 
+    say line is ax + by + bias
+    and the misplaced point is (m,n) 
+    the new a, b are 
+    (a,b) + (-1)^k (m,n) * learning rate
+    k is 0 for the should accept point misplaced
+    k is 1 for the should not accept point misplaced
+
+**  Perceptron  trick for more complicated line of seperation 
+    Key point: in order for gradient descent to work, you cannot
+    have a discrete error function but a continuous one
+
+***  The solution is to use a Sigmoid function, with its argument as 
+     WX+ b value we calculated
+
+***  Softmax function
+     when you have more than one class to be classified 
+     you can use the softmax function to assign probability to each category 
+     it works like a partition function 
 * <2018-11-06 Tue>
 
 ** There is a radius of convergence for Taylor series out of which the 
