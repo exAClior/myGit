@@ -1,0 +1,2 @@
+#+TITLE: A brief notes for "Learning GNU Emacs"
+
