@@ -1,2 +1,10 @@
 #+TITLE: A brief notes for "Learning GNU Emacs"
 
+
+* Chapter 1: Emacs Basics  
+
+** Key to Emacs
+
+*** Integration of different tools you need to finish a task
+
+** Understand Files and Buffers

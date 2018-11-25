@@ -1,6 +1,44 @@
 #+TITLE: Learning notes for ai on udacity
 
 
+* <2018-11-24 Sat>
+
+** One-Hot Encoding 
+   When you want to convert category data into numerical. The numerical input will be one or zero depending on whether this category is received by that subject or not
+
+** Maximum Likelihood
+   Each model assign each point two probabilities which adds up to one. (Correct : x , then incorrect is 1 -x). For each point pick the probability which correspond to the actual situation of the point
+   i.e if the point is infact incorrect, and the incorrect probability assigned by the model is 0.3 then the P(point) = 0.3, multiply all this kind of probability together
+   you get the likelihood correspond to this model. The model with highest lieklihood is the best model w.r.t this set of data
+
+**  Maximizing Probabilities 
+    But product is hard to compute, now, we use sum $-\sum_{i = 0}^{N }log(P(x_i))$
+
+** Cross Entropy
+   The above is called Cross Entropy, the lower the cross entropy, the better it is.
+   To calculate Cross Entropy given two list Y (1 if for ith item, it happened, 0 otherwise)
+   abd P (the probability when ith item happened)
+   Cross Entropy = -\sum_{i}^{m} y_i \ln{p_i} + (1-y_1) \ln{p_i}
+
+** Multi-Class Cross Entropy 
+   if the item can be in different categories, then we simply have multiple Y lists and P lists (or in Comp Sci language, use matrix)
+   Cross_Entropy = - \sum_{i = 1}^{n}\sum_{j = 1}^{m} y_{ij}ln(p_{ij})
+
+** Logistic Regression
+   replace all probabilities into sigmoid function \sigma(W,b), when we try to find the best model
+   we use gradient descent to try and minimize the Cross Entropy by assigning different W and b
+
+** Gradient Descent
+   set a learning rate, and change W and b in the negative direction of the gradient
+   So now, W'_i = W_i- \alpha \frac{d Error}{d w_i} 
+   and     b' = b - \alpha \frac{d Error}{d b}
+
+***  Derivative of Sigmoid function
+     \sigma'(x) = \sigma(x)(1-\sigma(x))
+
+***  To calculate gradient 
+     use the sigmoid derivative formula and think of the error produced by all points as 
+     the average of error produced by each point 
 * <2018-11-07 Wed>
 
 **  Perceptron trick
