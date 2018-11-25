@@ -1,6 +1,32 @@
 #+TITLE: Learning notes for ai on udacity
 
 
+* <2018-11-25 Sun>
+
+** Non-linear models
+
+***  How to find the curve
+     Combine two linear model into a non-linear. Add the probability of being true in both with weights, and then feed it to the sigmoid function. You can even add a bias
+
+***  How is this related to neural network
+     this kind of combining two linear model into a nonlinear one
+
+***  Deep Neural Network
+     When you have multiple hidden layers you get a highly nonlinear boundary within n dimension space
+
+** Feedforward
+   Take input value and apply sigmoid func and do matrix multiplication and then output the value
+
+*** Error Function
+    remains the same as before
+
+** Backpropogation
+   This is how you train a neural network
+
+*** Basically how you do
+    You look at each point and see how each model is classifying it 
+    add weight to the models that correctly identify the point and vice versa
+    
 * <2018-11-24 Sat>
 
 ** One-Hot Encoding 
