@@ -1,6 +1,18 @@
 #+TITLE: Learning notes for ai on udacity
 
 
+* <2018-11-26 Mon>
+
+** Find global min
+   Use momentum [[https://distill.pub/2017/momentum/][Paper to momentum]]
+
+** Multilayer Perceptrons
+   To make a row vector column, arr[:,None]
+
+** Links to further reading 
+   [[https://www.youtube.com/watch?v%3D59Hbtz7XgjM][Stanford Backpropagation]]
+   [[https://medium.com/@karpathy/yes-you-should-understand-backprop-e2f06eab496b][Blog about backpropagation]]
+
 * <2018-11-25 Sun>
 
 ** Non-linear models
