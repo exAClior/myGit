@@ -1,6 +1,17 @@
 #+TITLE: Learning notes for ai on udacity
 
 
+* <2018-11-28 Wed>
+
+** Pytorch Tensors
+   method with _ added behind, does the change in place (changes the variable itself)
+
+*** To convert from numpy tensor to pytorch
+    torch.from_numpy(numpy array)
+    b.numpy() change into a numpy array 
+    Alert!!! When you convert numpy array into pytorch ones, their memory are linked, meaning if you change one thing in place, another will change as well 
+
+
 * <2018-11-27 Tue>
 
 ** Overfitting and underfitting 
@@ -50,7 +61,6 @@
 
 ** Momentum 
    beta value between 0 and 1, multiply each the nth step before this step by beta to the power of n and add to the current step you will be taking 
-
 
 
 * <2018-11-26 Mon>
