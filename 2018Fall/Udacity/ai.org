@@ -1,6 +1,58 @@
 #+TITLE: Learning notes for ai on udacity
 
 
+* <2018-11-27 Tue>
+
+** Overfitting and underfitting 
+   Overfitting: the model is too complicated (kill a fly with bazuka)
+   underfitting: the model is over simplified and does not solve the problem correctly
+   Most often, we will end up in either over complicated or over simplified model
+
+**  How to stop overcomplicating model
+    we have two groups of data of known result.
+    Training set: used to train the model
+    Testing set: test how well the model is performing 
+    We pick the model which both testing and training set gives good error sizes
+
+**  What leads to overfitting
+    large coefficients (weights, that can be factored by the same number while still maining the separation line the same) usually leads to overfitting, one way to prevent this is to add the 
+    size of the weight (abs value or squared) to the error function
+    This is called Regularization
+
+** Two kinds of regularization
+
+*** L1 : abs value
+    it tend to reduce small weights to zero, so, at the end of the day. we will only need to use fewer weights
+    Good for feature selections, i.e  reduce number of weights you need to use
+
+*** L2 : square 
+    tend to maintian all weights small uniformly but no zero weights
+
+** Dropout 
+  Sometimes part of neural network are really well trained and gets more and more well trained
+  to prevent this, each epoch every node will have a chance of been droppped out when being trained
+
+** Local minima 
+   Sometimes you end up in local minimum, to prevent this, use multiple random starting point and use gradient descent
+   pick the min of them all.
+
+** Vanishing gradient
+   gradient gets very small since activation function gets slope very close to zero as we go to \pm infinity
+   and these gradients gets multiplied together, this makes gradients get even smaller
+   To prevent this, we use different activation function , hyperbolic tangent , or relu function
+
+** Batch vs. Stochastic Gradient descent 
+   Divide the large training sets into smaller batches, train each batch one after another for every epoch
+   you will make small and not very good change to the weights but you will have a much faster performance.
+
+** Learning rate decay
+   If model is not learning correctly, decrease the learning rate
+
+** Momentum 
+   beta value between 0 and 1, multiply each the nth step before this step by beta to the power of n and add to the current step you will be taking 
+
+
+
 * <2018-11-26 Mon>
 
 ** Find global min
