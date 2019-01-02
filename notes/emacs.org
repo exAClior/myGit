@@ -13,12 +13,59 @@
    you press c-x c-s 
 
 ** When opened a wrong file 
+   
    c-x c-v to open alternative 
 
 ** Append a file at the cursor of another 
+   
    c-x i
 
 ** Save as 
+   
    c-x c-w 
    it can write a file that you have to permission into writing to 
    however, as expected, it creates another copy of it 
+
+** How to search for command names 
+   
+   c-h f 
+
+* Chapter 2 Editing 
+
+** Refill mode 
+   
+   Keeps paragraph neat, M-x refill-mode Enter
+
+** Go to specific line 
+   
+   M-x goto-line 
+
+** Repeat command for n time 
+   
+   M- n 
+   
+   Or, just use C-u  
+   if no number is added automatically uses 4, else execute 4 time
+
+** Deleting lines 
+   
+   M-d delteing the remaining of the word
+   c-d deltes a char 
+   c-k kills an entire line 
+   c-w kills a region which you will select earlier with c-space 
+
+** Yanking 
+   
+   Everything you kill with commands other than c-d is assembled in 
+   kill ring. 
+   Calling c-y will yank those things back 
+
+** Highlighting the part 
+   with c-x c-x you see what you have just selected with c-space 
+   
+** Copy text 
+   
+   To copy a text, use m-w 
+
+** Get deleted things back
+   use M-y to get recently deleted texts back  
