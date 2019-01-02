@@ -5,8 +5,20 @@
 
 ** Key to Emacs
 
-*** Integration of different tools you need to finish a task
+   Integration of different tools you need to finish a task
 
 ** Understand Files and Buffers
- 
-** 
+   
+   Each file is opened as a buffer, the original file is not saved until 
+   you press c-x c-s 
+
+** When opened a wrong file 
+   c-x c-v to open alternative 
+
+** Append a file at the cursor of another 
+   c-x i
+
+** Save as 
+   c-x c-w 
+   it can write a file that you have to permission into writing to 
+   however, as expected, it creates another copy of it 
