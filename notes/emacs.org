@@ -69,3 +69,16 @@
 
 ** Get deleted things back
    use M-y to get recently deleted texts back  
+
+** Dealing with typos
+   
+   To transpose position of char or words 
+   use c-t or m-t or c-x c-t (for lines)
+
+** Captalize 
+   m-c for capilatizing a word
+   m-l for lowering a word 
+   kind of useless since it requires you to move the cursor to the 
+   char itself
+
+* Chapter 3 Search and Replace  
