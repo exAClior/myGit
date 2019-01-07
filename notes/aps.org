@@ -1,2 +1,8 @@
 #+TITLE Notes for APS Learning 
-
+* Chapter 1: Introduction 
+* Chapter 2: Data Structure and Libraries
+** Books for basics behind data strucutre 
+   Introduction to Algorithms
+   Data Abstraction and Problem Solving 
+   Data Structure and Algorithms
+**  
