@@ -1,0 +1,16 @@
+#+TITLE Notes for learning Emacs 
+* CHapter 1 : Introduction Why you need SQL
+** What is SQL
+   It gives you a way to interact with data through means of creating or modifying
+   tables.
+** SQL and OOP 
+   OOP dataset is organized around graph
+   SQL is around tables
+   Translation of data collection from OOP to SQL and back is doable
+   SQL handle ternary relation easily using a fourth table
+   OOP handle using a whole intermediate class 
+* Exercise 0: Setup 
+
+** Left 
+   Really just to read documentation for SQLlite later if have question 
+
