@@ -14,3 +14,26 @@
 ** Left 
    Really just to read documentation for SQLlite later if have question 
 
+* Exercise 1: Creating tables 
+
+** Declare Columns in a table 
+   Formart is: 
+              NAME TYPE which are separated by a space 
+   Type can be INTEGER, TEXT or something else,
+   each column is separate by commas.
+   Perhaps need to determine a PRIMARY KEY ??
+
+** How to create database
+   To create database itself:
+   sqlite3 ex1.db < ex1.sql
+
+** Try to declare the same table twice
+   It will give you warning, need to delete the old table and 
+   create everything agina using the command above 
+
+* Exercise 2: Creating a Multi-Table Database
+
+**  "Relations"
+   Tables that relate two or more other tables are called relations
+   But some people call every table a relation, confusing , but worth noting 
+
