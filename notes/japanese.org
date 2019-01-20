@@ -1,0 +1,19 @@
+#+TITLE: This is the note for Learning Japanese on my own
+
+
+* Goal
+  The Goal is to pass N2
+
+* Deadline
+  DEADLINE: <2019-12-01 Sun>
+
+* Testbook and Syllabus 
+  This section records the textbook I used and what materials I covered
+
+** Textbook
+   [[https://www.zhihu.com/question/268135214][Which textbooks recommended]]
+** Syllabus
+
+* Progress by material 
+
+
