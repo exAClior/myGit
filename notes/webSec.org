@@ -5,5 +5,25 @@
 * Chapter 1: Web Application security
 
 ** How Apps communicate with server
-   1)
-   2) 
+   1) Employ a browser
+   2) HTTP-based APIs
+
+** How a site show you it is secure
+   1) Show you the Secure Socket Layer (SSL) it uses
+   2) Tell you they have been Payment Card Industry (PCI) standard scanned
+
+** Common types of flaw for sites employing previous methods
+   1) Broken Authentication: 
+      may brute force login or even skip the login requirement 
+   2) Broken Access Control:
+      Allowing non root user to view or perform on the behalf of a root user
+   3) SQL injection:
+      Bob puts malicious codes into the server itself
+   4) XSS, puts malicious code into the version of web app sent to the user.
+      The user then executes these code.
+   5) Info Leakage:
+      Leaks important info that can be used to crack the server, may be through
+      error handling 
+   6) Cross-site request forgery:
+      [[https://www.quora.com/What-is-the-difference-between-XSS-and-CSRF-from-their-execution-perspective][Difference between xss and cross-site reuqest forgery, read it and summarize!]]
+
