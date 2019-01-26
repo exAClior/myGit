@@ -1,0 +1,24 @@
+#+TITLE: Deep Learning Nanodegree
+
+
+* Introduction to Deep Learning
+  
+** Lesson 5: Applying Deep Learning 
+   Note, not everything workds out of the box. 
+   Corrections:
+   - [[https://datascience.stackexchange.com/questions/38344/aws-ec2-segmentation-fault-core-dumped-issue-with-fast-style-transfer?rq%3D1][Dependencies]]
+   - [[https://stackoverflow.com/questions/47068709/your-cpu-supports-instructions-that-this-tensorflow-binary-was-not-compiled-to-u][When CPU is not supported]]
+
+*** Deep Traffic
+    Project from MIT
+
+*** Reinforcement Learning
+    The network is rewarded if its behavior gives higher score for
+    some pre-defined scheme
+
+*** Flappy Bird
+
+*** Books to read
+    [[https://www.manning.com/books/grokking-deep-learning][traskud17 for discount ]]
+    [[http://www.deeplearningbook.org/][MIT Press Book]]
+    [[http://neuralnetworksanddeeplearning.com/chap1.html][HTML Style Book]]
