@@ -17,8 +17,82 @@
     some pre-defined scheme
 
 *** Flappy Bird
-
+    Nothing to say
 *** Books to read
     [[https://www.manning.com/books/grokking-deep-learning][traskud17 for discount ]]
     [[http://www.deeplearningbook.org/][MIT Press Book]]
     [[http://neuralnetworksanddeeplearning.com/chap1.html][HTML Style Book]]
+
+** Lesson 6 Anaconda
+   Nothing to say here 
+** Lesson 7 Jupyter Nootbooks 
+
+*** Magic Keywords
+    1) % , %% applies keywords functionality in single line or cell respectively
+    2) List of keywords
+       - timeit
+       - matplotlib inline
+       - config InlineBackend.figure_format = 'retina' 
+         (to be used in tandum with the last command)
+       - pdb (for debugging)
+	 
+*** Other usege
+    1) Convert into HTML 
+    2) create slideshow
+
+** Lesson 8 Matrix and Numpy Refresher
+
+*** Data in Numpy
+   - scalars in numpy also has different types 
+     i.e: unit8, int8, uint16 ... etc
+   - np.array(x) 
+     used to initialize a new array, if x is scalar the new array is scalar
+     if x is array, the new array is array
+   - A tuple with single element is constructed as such 
+     x = 'item', -> note the comma it differentiates a tuple from a variable 
+   - x = v.reshape(x,y)
+     reshapes v into dimensions of x and y
+   - advanced reshape, the following statements are equal
+     x = v.reshape(1,4)  & x = v[None, :]
+     x = v.reshape(4,1) & x = v[:, None]
+   - to reshape a 2-d array into 1 d
+     np.reshape(a,a.length)
+   - to reshape a 2-d array into arbitarty dimension
+     let a = (x,y)
+     np.reshape(a,(x1,-1)) 
+     reshapes a automatically such that x * y = x1 * y1 and y1 is understood 
+     by the use of -1
+   - _use of order !!!!!!!!!!!!!!!!!!!!!!_
+     may be 'C' like or 'F' fortran like 
+     fortran is column major (keeps column const and vary row) 
+     and c is row major
+   - indexing 
+     1) basic slicing -> x[start:stop:step] 
+	note, we do not include sto
+     2) advanced indexing
+	it includes boolean indexing 
+	it returns a copy rather than a reference of the ndarray
+     3) boolean indexing 
+     4) _may need to look at this more_ 
+   - newaxis is a fancy way of saying add one more dimension with
+     no data in it for this array
+     i.e 
+     x[:,np,newaxis,:,:].shape
+     (2,*1*,3,1) the one is the added dimension 
+   - Ellipsis 
+     denoted by : ...
+     just the same meaning as ... in language, which is not specified 
+     ask the python to inteprate , (usually, just means " : " in indexing case)
+
+***  Matrix Multiplication
+     - For math multiplication of matrix use
+       matmul(a,b)
+     - For scalar matrix multiplication
+       a * b
+     - If matrix are two dimensional matmul() and dot() will return the
+       same matrix
+     - For detailed difference please refer to documentation
+
+***  Matrix transpose 
+     - m.T = m.transpose()
+ 
