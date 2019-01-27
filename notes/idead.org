@@ -1,0 +1,10 @@
+#+TITLE: Ideas for personal projects
+
+
+* Dota2
+  create some sort of battle royal map based on original dota2 map
+
+  every couple minutes (let user define) if the total people dead is not cetain
+  number, lightening kill people
+
+  need to balance the weaker team by some sort 
