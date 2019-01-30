@@ -1,0 +1,8 @@
+#+TITLE: Udacity python data and algo review
+1) Functions in python always need to have self as parameter 
+2) when you use len(), it is a function byitself, it does not need, a.len()x
+3) 
+4) 
+5) 
+6) 
+7) 
