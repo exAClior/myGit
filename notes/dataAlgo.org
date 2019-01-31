@@ -1,8 +1,8 @@
 #+TITLE: Udacity python data and algo review
 1) Functions in python always need to have self as parameter 
 2) when you use len(), it is a function byitself, it does not need, a.len()x
-3) 
-4) 
-5) 
-6) 
+3) deque, double-end queue, you can both add and delete from both ends
+4) you store the head and tail of queue
+5) priority queue, sorted according to a priority value assigned to the element
+6) items with the same priority, the oldest gets removed first
 7) 
