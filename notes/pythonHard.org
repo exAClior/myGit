@@ -1,0 +1,8 @@
+#+TITLE: Learn python the hard way
+* Exercise 5 :More Variables and Printing 
+- formatted string:
+  1) f"the content of the string {variable_name_thats_supposed_2b_here} "
+  2) Or just define the string first 
+     s = "i am a string with undefined variable here {}"
+     Later, you use s.format(provide_variable) 
+- 
