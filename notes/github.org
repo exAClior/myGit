@@ -17,6 +17,7 @@
       use "--p(atch)" to see the actual changed been made
       use "-p" + SHA to see the detailed info about a certain commit
       use "--decorate" to see which branch the header is pointing to
+      "git log --graph --all" show a graph of commits of every branch
     - git show
       show info about the given commit
     - git show 
@@ -42,13 +43,28 @@
       providing a branch name will add that branch
       "git branch name SHA" will create a branch at the commit specified 
       by the SHA
+      "-d name" is used to delete a branch,
+      note you cannot delete a branch you are currently on, need 
+      to switch to something else before you can do that
+      "-D name" is used to force delete a branch because git will not let 
+      you delete a branch if it has commits that are not merged 
     - git checkout
       swtich between different branches and tags
       it moves the header to the branch specified
       it basically looks at another snapshot taken at a potentially 
       different commit and revert every file into the condition there
+      "git checkout -b new_branch old_branch" will create a new branch 
+      based on the old one and checkout to it 
     - git merge
       combine changes on different branches
+      "git merge name_of_branch_tobe_merged_into"
+      the usual merge will find a commit that are in both branches
+      then apply each changes recorded by the commits on both branches
+      finally, it will made a commit to record the merge
+      ATTENTION: when we merge, we always merge the changes from the 
+      specified branch into the one we are currently checked out with
+    - git reset --hard HEAD^
+      if you made a wrong merge, this reverts things
 
  3) Telling git to ignore certain kinds of files
     - Firstly add .gitignore file 
@@ -66,7 +82,9 @@
 	     a/b/z
 	     a/v/c/z 
 	 [[https://www.gitignore.io/][Convenient .gitignore files]]
- 4) 
+ 4) fast forward merge, nothing changes to one branch, just moves it into
+    a later time branch, i.e make the two branches now share the exact snapshot
+    of the files
 
 
 
