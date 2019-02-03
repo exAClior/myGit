@@ -16,6 +16,7 @@
       use "--stat" flag to see which files have been changed
       use "--p(atch)" to see the actual changed been made
       use "-p" + SHA to see the detailed info about a certain commit
+      use "--decorate" to see which branch the header is pointing to
     - git show
       show info about the given commit
     - git show 
@@ -29,6 +30,26 @@
       take file from staging index and save them in repository
     - git diff 
       show difference with two files
+    - git tag
+      add tags to commit like labels
+      "tag -a version_number (SHA)", if the first six digit of SHA is not 
+      provided, this tag will stick with the most recent commit 
+      a tag sticks with a commit and a tag also contains message with it
+      "tag -d version_number" it deletes a tag
+    - git branch
+      allows multiple threads of development
+      just calling "git branch" will list all branches 
+      providing a branch name will add that branch
+      "git branch name SHA" will create a branch at the commit specified 
+      by the SHA
+    - git checkout
+      swtich between different branches and tags
+      it moves the header to the branch specified
+      it basically looks at another snapshot taken at a potentially 
+      different commit and revert every file into the condition there
+    - git merge
+      combine changes on different branches
+
  3) Telling git to ignore certain kinds of files
     - Firstly add .gitignore file 
     - Secondly, in the .gitignore file, add name of files to be ignored 
