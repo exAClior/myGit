@@ -15,6 +15,39 @@
       show info about the past commits
       use "--stat" flag to see which files have been changed
       use "--p(atch)" to see the actual changed been made
+      use "-p" + SHA to see the detailed info about a certain commit
     - git show
       show info about the given commit
-    - 
+    - git show 
+      works kind of like "git log -p"
+      use "-w" ignore changes to whitespace
+      use "--stat" to override  the "-p" default property of git show
+    - git add
+      add file from working directory to the staging index
+      use "." to add everything under the current directory 
+    - git commit 
+      take file from staging index and save them in repository
+    - git diff 
+      show difference with two files
+ 3) Telling git to ignore certain kinds of files
+    - Firstly add .gitignore file 
+    - Secondly, in the .gitignore file, add name of files to be ignored 
+      Technique of globbing explained:
+      when you define a name, it can be generalized for multiple files 
+      whose name following the gneralization you define using the 
+      following rules
+      1) * matches 0 or more chars
+      2) ? matches 1 character
+      3) [abc] matched for a, b, or c
+      4) ** matches nested directories ,
+	 e.g: a/**/z equal to 
+	     a/z
+	     a/b/z
+	     a/v/c/z 
+	 [[https://www.gitignore.io/][Convenient .gitignore files]]
+ 4) 
+
+
+
+
+
