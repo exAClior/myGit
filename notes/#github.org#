@@ -1,0 +1,13 @@
+#+TITLE: Notes for starting to learn Github
+
+
+* AI Nanodegree github
+ 1) Git is distributed system, in the sense that every computer has its own
+    copy to be used offline
+ 2) Some commands to take notice to
+    - git init 
+      used to create brand new repository
+    - git clone 
+      clone a repo 
+    - git status 
+      check status of your repo

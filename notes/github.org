@@ -1,0 +1,6 @@
+#+TITLE: Notes for starting to learn Github
+
+
+* AI Nanodegree github
+ 1) Git is distributed system, in the sense that every computer has its own
+    copy to be used offline
