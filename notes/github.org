@@ -4,3 +4,17 @@
 * AI Nanodegree github
  1) Git is distributed system, in the sense that every computer has its own
     copy to be used offline
+ 2) Some commands to take notice to
+    - git init 
+      used to create brand new repository
+    - git clone 
+      clone a repo 
+    - git status 
+      check status of your repo
+    - git log 
+      show info about the past commits
+      use "--stat" flag to see which files have been changed
+      use "--p(atch)" to see the actual changed been made
+    - git show
+      show info about the given commit
+    - 
