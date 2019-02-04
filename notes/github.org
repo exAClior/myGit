@@ -65,8 +65,36 @@
       specified branch into the one we are currently checked out with
     - git reset --hard HEAD^
       if you made a wrong merge, this reverts things
+    - git commit --amend
+      alter the most recent commit
+      may be used to alter the message of the last commit
+      Or, if you actually forget to change a file, you can just follow
+      the process of a new commit to change that file but at the 
+      git commit --amend, you add the "--amend" to the commit command
+    - git revert (SHA-of-commit-to-revert)
+      This simply applys the commit history backward, but it does not acutally
+      delete the content of the commit 
+    - git reset
+      this is a very dangerous command, it deletes commits completely, 
+      the commit becomes non-exisistent from the history, (however,you may use
+      git reflog to retrieve that commit)
+      * to revert and reset using reference to parent or grandparent commits
+	HEAD^^...^(,2) : number of ^ indicates how many generations ago
+	                  number following that indicates which parent it is
+	                 remember you may have the branch that is been merged into (2_
+	                 and the branch you are performing the merge  on (empty)
+	HEAD~# : # indicates how many generations ago
+      * Also you could provide the following three flags to tell git where
+	you would like it to place the current commit's change into 
+	--mixed (default) puts into working directory
+	--soft to the staging index 
+	--hard throw out into trash of every commit between the HEAD and SHA commit
+      * Usually, it is a good idea to create git branch backup before you 
+	do anything to the current branch, then you may merge backup into master
+	which will cause the master yo be fast-forward merged into backup
 
- 3) Telling git to ignore certain kinds of files
+	
+ 1) Telling git to ignore certain kinds of files
     - Firstly add .gitignore file 
     - Secondly, in the .gitignore file, add name of files to be ignored 
       Technique of globbing explained:
@@ -82,10 +110,12 @@
 	     a/b/z
 	     a/v/c/z 
 	 [[https://www.gitignore.io/][Convenient .gitignore files]]
- 4) fast forward merge, nothing changes to one branch, just moves it into
+ 2) fast forward merge, nothing changes to one branch, just moves it into
     a later time branch, i.e make the two branches now share the exact snapshot
     of the files
-
+ 3)  Some useful links 
+     [[https://dotfiles.github.io/][some configuration files of others]]
+     [[https://github.com/jlord/git-it-electron][Game for practise git commands]]
 
 
 
