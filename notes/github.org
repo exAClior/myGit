@@ -113,10 +113,27 @@
  2) fast forward merge, nothing changes to one branch, just moves it into
     a later time branch, i.e make the two branches now share the exact snapshot
     of the files
- 3)  Some useful links 
-     [[https://dotfiles.github.io/][some configuration files of others]]
-     [[https://github.com/jlord/git-it-electron][Game for practise git commands]]
-
-
-
-
+ 3) Some useful links 
+    [[https://dotfiles.github.io/][some configuration files of others]]
+    [[https://github.com/jlord/git-it-electron][Game for practise git commands]]
+ 4) Remote repositories 
+    - git remote
+      git remote add +URL 
+      it is used to add a local repository onto github
+    - git push
+      the same command is provided to git push as git pull
+    - git pull
+      need to provide name of the remote (origin)  and branch name 
+      (master) to pull
+      this will automatically merge your local branch with the remote branch
+      if you do not want this feature, run git fetch
+    - git fetch
+      retrieves the commits and creates another branch
+      can latter use git merger to merge the local master branch into the origin/master
+    - git merge A
+      the current branch is moved and merged into A
+    - git pull cannot be used when the local has commits that the remote do not
+      you will have to use git fetch and then merge
+    - Take note that origin/master is the branch name on a local machine that 
+      indicates where the remote's branch is. On the remote machine that branch
+      is simply called master
