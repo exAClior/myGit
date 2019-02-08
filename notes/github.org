@@ -137,3 +137,34 @@
     - Take note that origin/master is the branch name on a local machine that 
       indicates where the remote's branch is. On the remote machine that branch
       is simply called master
+ 5) Stay synch with a remote repository
+    - To collaborate with others, you first fork the source repository
+    - the repository you just forked will be a repository of your own
+      you then make changes and commit to it
+    - finally you create a pull request on github to ask the owner of that file 
+      whether he/she would want to pull your commits into his own repository
+    - when the owner changes things, your forked branch is out of synch
+      so you need to manually connect your local with owners remote,
+      you do "git remote add upstream + url" note, the upstream is like origin 
+      which serves to identify the repository
+    - if you feel like it, you can call two repositories whatever you want
+      and you could rename them using "git remote rename"
+    - to get commits from owner repository , do " git fetch upstream branchname"
+    - to get owners change into my folked repository, you first merge local with 
+      owners master branch, then you push everything onto your origin master
+    - git rebase
+      * used to squash, combine couple commits into one larger commit
+      * git rebase -i (pointer to which commit you want to be the previous commit)
+      * before you do rebase, you may want to create another branch called backup
+	that points to the current commit so that you could easily get back to them
+      * to really squash, you need to change pick into squash except for the first 
+	one , you switch the first command from pick to reword because you would 
+	like to change its commit message
+      * after squashing, push will not work, so you need to force
+ 6) Few links 
+    [[https://up-for-grabs.net/#/][Help wanted project]]
+    [[https://www.firsttimersonly.com/][Teach you first timers]]
+    [[https://github.com/search?utf8%3D%25E2%259C%2593&q%3Dlabel%253Afirst-timers-only%2Bis%253Aopen&type%3DIssues&ref%3Dsearchresults][For first timers specific]]
+    [[https://blog.kentcdodds.com/first-timers-only-78281ea47455][Blog for repository owners]]
+
+
