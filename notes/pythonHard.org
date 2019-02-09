@@ -1,8 +1,57 @@
 #+TITLE: Learn python the hard way
-* Exercise 5 :More Variables and Printing 
+* Exercise 5 - 10 : About Printing  
 - formatted string:
   1) f"the content of the string {variable_name_thats_supposed_2b_here} "
   2) Or just define the string first 
      s = "i am a string with undefined variable here {}"
-     Later, you use s.format(provide_variable) 
-- 
+     Later, you use s.format(provide_variable)
+  3) print(message,end = "\n") the end parameter provides what to put at the 
+     end of the message
+- print(""" 
+  A paragraph of message, the format of message will be exactly the same 
+  as you typed
+  """)
+-  You can also use triple  """ to type special marks like quotation without 
+   using the escape \
+
+* Exercise 11: Take input 
+  - Just use the input(prompt)  function
+  - command pydoc (function) will help you understand what a fucntion does
+
+* Exercise 13: Parameter, Unpacking, Variables
+  - argv is the defualt variable that stores the programm's name and the 
+    variable you pass to it on command line
+
+* Exercise 15: Reading files
+  - file = open(filename) 
+  - file.close()
+  - file.read() reads the whole file
+  - file.readline()
+  - file.truncate() empty the file
+  - file.write(message)
+  - file.seek(0) move the read/write location to the beginning of the file
+  - os.path.exists(path) tests if a file exist or not 
+
+* Exercise 18: Functions
+  - Ways to define a function 
+    1) def(*arg): 
+           takes multiple arguments
+    2) def(arg1, arg2 ..):
+           takes defined multiple arguments
+       
+* Exercise 23: Strings, Bytes, and Character Encodings
+  - line.strip(char) removes the char in a line, if nothing is provided removes
+    all white spaces
+  - unicode used 32 bit but it is too big, so we use the first 8 bit for the 
+    most common characters and if an escape sign is met, the following 8 bit 
+    appened on the previous 8 to make 16 bit, or more escape and make 32 bit,
+    but it is a bit unclear to me as how they tell which escape to stop at 
+    for each char
+
+* Exercise 25: More Exercise
+
+  - Things enclosed by """ """ will come out as documents of a fucntion 
+    and can be retrieved by help(function_name)
+
+* Exercise 26: Test Finished 
+
