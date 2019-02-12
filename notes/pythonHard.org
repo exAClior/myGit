@@ -53,5 +53,42 @@
   - Things enclosed by """ """ will come out as documents of a fucntion 
     and can be retrieved by help(function_name)
 
-* Exercise 26: Test Finished 
+* Exercise 26: Test Finished
+
+* Exercise 27: Logic
+  - for the key word and 
+    A and B , python first evaluates the value of A, if it evaluates to false, 
+    A's value is returned, else python evaluates B and its value is returned
+
+* Exercise 35: Branches and Functions
+  - exit(code)
+    code == 0 ; no error
+    code > 0; for every different number, you could assign a different 
+              reason of error to it
+
+* Exercise 37: Symbol review
+  - assert 
+    test if something is true
+  - except 
+    except ValueError as e: print(e)
+    if exception happens, do this
+  - del 
+    del X[y]
+    delte Y from dictionary X
+  - finally 
+    whether exceptions or not , do this in a try loop
+  - global 
+    declare global variable
+  - raise 
+    raise exception when things go wrong
+  - to store things in byte 
+    x = b'hello'
+  - yield 
+    works like a returning a list, but executes the loop just enough so that 
+    one value is yielded in a loop, next time, you call the function that 
+    include yield, the loop is ran again til another value is computed and 
+    returned. Can save space and resource for computing things
+
+
+
 
