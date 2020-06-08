@@ -1,11 +1,30 @@
-#+TITLE: Work Logging 
+#+TITLE: Work Logging
 
-
-
-
-
+* <2020-06-08 Mon>
+  
+** STAQ Continued 
+9   :LOGBOOK:
+   CLOCK: [2020-06-08 Mon 10:16]--[2020-06-08 Mon 11:03] =>  0:47
+   CLOCK: [2020-06-08 Mon 08:18]--[2020-06-08 Mon 09:12] =>  0:54
+   :END:
+   
 * <2020-06-07 Sun> 
 
 ** Go over stuff on STAQ 
+   :LOGBOOK:
+   CLOCK: [2020-06-07 Sun 16:23]--[2020-06-07 Sun 19:43] =>  3:20
+   CLOCK: [2020-06-07 Sun 14:05]--[2020-06-07 Sun 16:08] =>  2:03
+   CLOCK: [2020-06-07 Sun 11:39]--[2020-06-07 Sun 11:46] =>  0:07
+   CLOCK: [2020-06-07 Sun 10:30]--[2020-06-07 Sun 11:33] =>  1:03
+   CLOCK: [2020-06-07 Sun 10:29]--[2020-06-07 Sun 10:30] =>  0:01
+   CLOCK: [2020-06-07 Sun 10:22]--[2020-06-07 Sun 10:27] =>  0:05
+   :END:
+
    
+** Dr. Fang's project 
+   :LOGBOOK:
+   CLOCK: [2020-06-07 Sun 20:15]--[2020-06-07 Sun 20:28] =>  0:13
+   :END:
+   
+
 
