@@ -14,7 +14,7 @@
 #+COLUMNS: %40ITEM %10BEAMER_env(Env) %9BEAMER_envargs(Env Args) %4BEAMER_col(Col) %10BEAMER_extra(Extra)
 
 
-* How do you find a needle in a haystack?
+* Motivation: How do you find a needle in a haystack?
 
 ** Naively
 
@@ -46,23 +46,71 @@
      problem [[http://web.cs.ucla.edu/~pouchet/lectures/doc/888.11.algo.6.pdf][link to where I got this]]
    - Boring, but that's what's awesome about Machine Learning
      
-** The most intriguing pattern finding puzzle
 ** Large Amount of Data [fn:2]
    - It is costly to develop new algorithm
    - Over abundance of data
    - Hard and costly for humans to find the pattern
-* A closer look at the needle?
-** Higgs Boson [fn:1]
+* Find a concrete example for the needle: Higgs
+** Higgs Boson (naively) [fn:1]
    - Last elementary particle in the SM to be observed
    - Mechanicsm that gives mass to massive elementary particles predicts its
      existence.
-   -
-** What more do we know about the Higgs Boson [fn:3]
+   - But is it really necessary?
+** Higgs Boson (closely) [fn:5]
+   - Unification of the electromagnetic and weak force
+   - Four force particles involved -> $W^{\pm}$, Z, and photon gauge bosons
+   - Threee of the four annexes three Bosons and "breaks" this symmetry
+   - What breaks it? Vacuum Expectation Value
+**  VEV [fn:5]
+   - Whether $\phi=0$
+   - Field vs. Potential
+     #+ATTR_LATEX: :width=0.9\textwidth  
+     [[~/myGit/phy599/BoringPotential.png]]
+     
+**  VEV [fn:5]
+   - Higgs is special!
+   - Field is not zero when potential is lowest!
+           #+ATTR_LATEX: :width=0.9\textwidth  
+	   [[~/myGit/phy599/Higgs-Potential-lookdown.png]]
+	   
+**  VEV [fn:5]
+   - Breaks the rotation symmetry
+   - Similarily for electroweak symmetry
+   - One of the four Higgs obtains non-zero vev
+           #+ATTR_LATEX: :width=0.7\textwidth :height=0.7\textheight  
+	   [[~/myGit/phy599/Higgs-Potential-Goldstone.png]]
+	   
+**  Goldstone and Higgs Bosons [fn:6]
+   - Excitation in different direction -> different Bosons
+   - non-flat direction -> this boson has mass
+           #+ATTR_LATEX: :width=0.9\textwidth  
+	   [[~/myGit/phy599/Higgs-Potential-radial.png]]
+
+	   
+**  But you still did not tell me why [fn:6]
+   - The Higgs is needed for the probability to work out if you don't change
+     anything about the theory
+           #+ATTR_LATEX: :width=0.9\textwidth  
+	   [[~/myGit/phy599/unitarization.png]]
+     
+   
+** What if you change the theory? [fn:6]
+   - The theory becomes non-perturbative
+   - We need to introduce more internal virtual particles during a scattering
+     process
+   - Too many possible ways for the intermediate process to be, too complex
+   - Meaning there are sub-particles that makes up W Bosons around TeV scale
+   - Did not see that in experiments
+   - Similar things could be explained with a much easier theory of Higgs, why
+     not take that :)
+* Time to carry out the experiment   
+** What more do we know about the Higgs [fn:3]
    - Know the rough range of mass
    - General Consideration is for it to be smaller than ~ 1 TeV
    - Electroweak Measurement says it is  < 152 GeV
    - LEP Collider says it shoud be > 114.4 GeV
-     
+   - Final search region was between 110 GeV and 140 GeV at ATLAS
+** Decay Channels
 ** What haystack?
    - what are the back ground noise?
    - What are the information that we can get?
@@ -121,10 +169,20 @@ effects become important and even limiting. Experience shows that a large, often
 dominating amount of time in data analysis is spent on estimating and handling
 the systematic errors, after the express production of first, exploratory, results.
   - scultping of variables , what does it mean?
-
-
-  
-
+* Backups
+** Three Quaters of the Higgs Boson? [fn:4]
+   - When we detected W and Z bosons, we have really detected the three quarters
+     of Higgs Boson.
+   - W and Z Bosons absorbed them to become massive
+   - But force particles natrually appear in theory as massless
+   - A solution is to annex a massive particle: Higgs Mechanism
+   - Previously: Goldstone Bosons
+   - "The difference between massless force particles (like the photon and
+     gluon) and massive force particles (like the W and Z) is the longitudinal
+     degree of freedom."
+   - The Higgs breaks the electroweak symmetry for the weak charge that it had
+   - The vacuum expectation values allows the three to be eaten
+     
 * Bibliography                                                      :B_frame:
   :PROPERTIES:
   :BEAMER_env: frame
@@ -143,3 +201,11 @@ the systematic errors, after the express production of first, exploratory, resul
 [fn:2] cite:Bourilkov2019 
 
 [fn:1] cite:Aad2012
+
+[fn:4] cite:tanedo
+
+* Footnotes
+
+[fn:6] cite:tanedo 
+
+[fn:5] cite:tanedo 
