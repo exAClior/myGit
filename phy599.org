@@ -1,0 +1,145 @@
+#+OPTIONS: H:2 toc:t ^:nil tags:t f:t
+#+AUTHOR: Yusheng Zhao
+#+EMAIL: yusheng.zhao@stonybrook.edu
+#+DATE: \today
+#+TITLE: Machine Learning in HEP
+#+SUBTITLE: Finding Higgs Boson
+#+Description: A brief discussion of machine learning helps to find Higgs Boson
+#+BEAMER_THEME: Berlin
+#+BEAMER_FONT_THEME: professionalfonts
+#+startup: beamer
+#+LATEX_CLASS: beamer
+#+LATEX_CLASS_OPTIONS: [presentation, smaller]
+#+LATEX_HEADER: \usepackage{braket}
+#+COLUMNS: %40ITEM %10BEAMER_env(Env) %9BEAMER_envargs(Env Args) %4BEAMER_col(Col) %10BEAMER_extra(Extra)
+
+
+* How do you find a needle in a haystack?
+
+** Naively
+
+   #+BEGIN_SRC c++ 
+     while(1){
+       stick_your_hand_in_the_haystack();
+
+       vehemently_move_your_hand();
+       if(needle_stick_in_hand){
+	 cout << "hurray I found the needle" << endl;
+	 return 0;
+       }
+
+      }
+   #+END_SRC
+  
+** A better way?
+   
+   #+BEGIN_SRC c++ 
+     get_a_magent();
+     use_the_magnet();
+   #+END_SRC
+
+** Magnet is Machine Learning
+   - Is it really a black box?
+   - But surely you don't know why it works.
+   - Not a rigorous algorithm
+   - There needs to be an invariant over some state that is related to our
+     problem [[http://web.cs.ucla.edu/~pouchet/lectures/doc/888.11.algo.6.pdf][link to where I got this]]
+   - Boring, but that's what's awesome about Machine Learning
+     
+** The most intriguing pattern finding puzzle
+** Large Amount of Data [fn:2]
+   - It is costly to develop new algorithm
+   - Over abundance of data
+   - Hard and costly for humans to find the pattern
+* A closer look at the needle?
+** Higgs Boson [fn:1]
+   - Last elementary particle in the SM to be observed
+   - Mechanicsm that gives mass to massive elementary particles predicts its
+     existence.
+   -
+** What more do we know about the Higgs Boson [fn:3]
+   - Know the rough range of mass
+   - General Consideration is for it to be smaller than ~ 1 TeV
+   - Electroweak Measurement says it is  < 152 GeV
+   - LEP Collider says it shoud be > 114.4 GeV
+     
+** What haystack?
+   - what are the back ground noise?
+   - What are the information that we can get?
+** Challanges
+   - Why is it difficults
+* How does the experiment work?
+  - describe how the experiment works and diverge to the machine learning part
+    when we hit the obstacle of trying to find what we want to see
+* How the magnet works?
+  -mix the information about machine learning here.
+** BDT
+** Artificial Neural Networks
+* Machine Learning Vocabs
+** Decision Trees cite:geeksforgeeks_2019
+   - Can be used to assign data to class
+         #+ATTR_LATEX: :width=0.9\textwidth  
+	 [[~/myGit/phy599/Decision_Tree.png]]
+** Boosted Decision Tree (BDT) cite:Bourilkov2019
+   - Convert weak to strong learner ?
+** Artificial Neural Networks
+   - Layers of nodes
+   - Weighted inputs and nonlinear transformation
+   - rectified linear unit (ReLU)
+   - Hidden Layers : Deep Learning
+** Optimizing the model
+   - Evaluating a cost for model
+   - Minimize the cost through evolution of model
+   - Backpropogation (chain rules)
+   - Stochastic Gradient Descent
+* Machine Learning Examples:
+  - Higgs Boson 2012
+  - boosted decision tree
+  - small signals (invariant mass peaks) over large smoothly falling
+backgrounds
+** Little bit of physics behind it
+   -then the Higgs decays and couplings to the heavy W and Z
+gauge bosons, as well as the heavy third generation quarks (bottom and top) and
+tau leptons, have been observed by both ATLAS and CMS, and are consistent with
+the predictions of the SM at the current level of precision
+** What to look for
+   - observing Higgs decays and measuring its couplings to fermions outside the third generation
+   - decays to a pair of muons with oppotiste change ($\mu^{+}$,$\mu^{-}$)
+   - But this only occurs with small probablility 0.02% ( other possibilities
+     are Drell-Yan, top quark or W boson pairs production)
+   - dimuon invariant mass peak near 125 GeV, only a few GeV wide, determined by
+the experimental muon momentum resolution. In contrast, the background events
+exhibit a smoothly falling mass spectrum in the search region from 110 to 160 GeV
+
+* Quantum Computers to save the day? (The challanges and outlooks)
+** Mentioned in paper 
+  
+  -The large amounts of data collected at colliders like the Large Electron-Positron
+collider (LEP) or the LHC, and at the intensity frontier, mean that the statistical
+errors on the collected data samples tend to get quite small, and often the systematic
+effects become important and even limiting. Experience shows that a large, often
+dominating amount of time in data analysis is spent on estimating and handling
+the systematic errors, after the express production of first, exploratory, results.
+  - scultping of variables , what does it mean?
+
+
+  
+
+* Bibliography                                                      :B_frame:
+  :PROPERTIES:
+  :BEAMER_env: frame
+  :END:
+  
+  bibliographystyle:abbrv
+  bibliography:~/Dropbox/bib/Phy599.bib
+
+* Footnotes                                                         :B_frame:
+  :PROPERTIES:
+  :BEAMER_env: frame
+  :END:
+
+[fn:3] cite:Chatrchyan2012 
+
+[fn:2] cite:Bourilkov2019 
+
+[fn:1] cite:Aad2012

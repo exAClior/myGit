@@ -1,0 +1,76 @@
+#+title: Midterm Report
+#+author: Yusheng Zhao
+#+date: <2020-10-05 Mon>
+#+options: toc:nil
+
+* Question 1
+  - I think I am pretty well prepared.
+  - Whenever I see group theory, that's where I get stuck/feels bad. I never had
+    any group theory at all. And, I don't really like/ feel comfortable when some
+    concepts are left hanging in the air. I always like to see the rigorous
+    derivation, whether it is by myself or during the course.
+  - With that said, I think my prepareness is mainly contributed from my solid
+    foundations in quantum mechanics. I am afterall a physics major. So, I think
+    a semester or Quantum Mechanics would really help.
+  - I sort of have all the backgrounds needed to complete the course even with
+    the advanced topics. But I feel like if there is a chance, a two semester
+    course with the first semester focusing on the foundation and the second
+    semester focusing on the materials that would be considered as research or
+    advanced topics would be really cool!
+  - The most challenging part is perhaps to get all the advanced topics to the
+    degree that I will be comfortable picking either of the topics as a research
+    topic. I have always wanted to have a good overview of all the possible
+    research topics in the sense that I would be able pick something that
+    interests me and do real research about these topics. But to organize these
+    information on my own is almost impossible since I do not know all the
+    topics beforehand.
+* Question 2
+  - I think the materials are prepared very well given the limitation of the
+    length of this course. I personally would like to see more detailed
+    treatment on more advanced topics. But I feel like there would be students
+    who would get much less out of this if we focus on more advanced topics. So,
+    now is a good balance for most people.
+  - The video recording and slides are EXTREMELY helpful when I do the
+    homework. Whenever I have something unclear, I would just go over the
+    related topics again. I am not able to think and learn while taking
+    notes. So going back from time to time helped me a lot. 
+* Question 3
+  - I did not really find any of the standard material hard to understand.
+  - However, I found the following slightly advanced material to be hard.
+    1: Error Correction Conditions: It involves some group theory that I did not
+    feel comfortable dealing with.
+    2: Hybrid Classical Neural Network: Feels like the topic needs more time. I
+    feel that I did not even have a vague understanding of it.
+    3: Just came across toric code today. Very confusing. Need more time with them.
+  - In general, I just read a bit more on the topic and I will get more out of
+    those topics. The lecture sort of introduces the general notion to me. But
+    we never had the time to go over the details and derivations and such. So
+    actually trying to do the derivations myself really helped too!
+* Question 4
+  - I think the homeworks are great.
+  - I am a believer that we learn the most when we make mistakes. I tend to make
+    some mistake when I am deriving or trying to solve problems I have never
+    seen before. Going through them really helps me understand them. Usually in
+    class, the derivation is kind of not too detailed. I personally likes to see
+    the entire derivation steps. I am dumb. But when I try to do it, I get
+    it clear and complete. 
+  - I also check the answer key to see if there's a better solution or correct
+    what I did wrong. And the annotations are very helpful. I do not have to
+    compare line to line with the suggested answer key. I could just focus on
+    the parts where you labeled out.
+* Question 5
+  - The notebooks worked very well.
+  - I think they are very useful in terms of connecting the knowledge on paper
+    with the application in real life.
+  - I did not really try these notebooks but I have done most of them prior to
+    this course.
+  - I am generally comfortable with coding.
+  - Another suggestion from my experience with the Computer Science
+    education. If we ever had the resource, we should hold a lab session for the
+    hands on experience with coding. That's what the computer science courses
+    usually do. They would have a weekly lab session to have the students work
+    on their own on coding problems. TAs would be there to help them, should any
+    one gets stuck.
+* Overall
+  The learning experience has been great! Thank you so much for the time and
+  effort you put into this course. It helped me a lot.
