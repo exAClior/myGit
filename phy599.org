@@ -38,6 +38,11 @@
      use_the_magnet();
    #+END_SRC
 
+** Black Magic
+   #+BEGIN_SRC c++ 
+      accio_needle();
+   #+END_SRC
+
 ** Are we not going to talk about ML
    - Is it really a black box?
    - But surely you don't know how it works
@@ -182,7 +187,7 @@
 ** Gif that you should not miss
    [[http://opendata.atlas.cern/books/current/openatlasdatatools/_book/atlas_higgs_animations.html][Gif]]
 
-* Alternative towards BDT: Neural Networks
+* Alternative towards BDT: Shallow Neural Networks
   
 ** Pros and Cons
    - BDT is not so black boxy
@@ -193,25 +198,65 @@
    - Layers of nodes
    - Weighted inputs and nonlinear transformation
    - rectified linear unit (ReLU)
-   - Hidden Layers : Deep Learning
-
-** What it looks like
-         #+ATTR_LATEX: :width=0.9\textwidth  
-	 [[~/myGit/phy599/NeuralNetwork.png]]
 
 ** Optimizing the model
    - Evaluating a cost for model
    - Minimize the cost through evolution of model
+   - Different learning rate
    - Backpropogation (chain rules)
    - Stochastic Gradient Descent
 
+* The Next Step: Deep Learning
+** Deep Neural Network
+         #+ATTR_LATEX: :width=0.9\textwidth  
+	 [[~/myGit/phy599/NeuralNetwork.png]]
+** Difference between Deep and Shallow NN [fn:10]
+   - Effectiveness is the same
+   - Many more hidden layers
+   - Number of nodes might explode for the shallow NN
+   - Different parameters were used in Shallow vs. Deep Neurual Networks [fn:11]
+	 
+** Autoencoder [fn:12]
+   - Copies imperfectly the input as the output 
+   - Feed its output to another NN
+   - Also solves the vanishing gradient problem
+     
+** On a higher level [fn:12]
+   - DNN is modular and hierarchical
+   - Different modules are focus on different part of the data
+  
+** Physical example [fn:12]
+   - Typical events are made up of jets
+   - Jets are made up of hardons
+   - Hardons gives info on tracker and calorimeter
+     
+** On a more detailed level [fn:12]
+   - Convolutional filter -> extracts the local features 
+   - Pooling layer -> summarizes the local features by taking the max or average
+     of the previous layer
+     
+* Example for the Higgs
+  
+** Jet Identification [fn:12]
+   - Differentiate Jets from W, Z , H Bosons, quarks, and gluons
+   - Traditionally done with flavor tagging and jet substructure tagging
+   - Resembles human created algorithms that tells us which is which based on
+     the property carefully picked by humans
+   - We identified useful information, but did we throw away some hidden
+     information when we group the jets this ways?
+   - Feed the data into DNN, let it do the grouping for us.
 
+     
+** Results [fn:12]
+   - factor of 4 improvement
+           #+ATTR_LATEX: :width 0.7\textwidth :height 0.7\textheight  
+	   [[~/myGit/phy599/DNNimprove.png]]
 
 * The challanges and letouts
 ** Left outs
    - Much more Machine Learning could do
    - Effectively increse luminosity
-   - Ultrafast processing
+   - CNN auto detection of features
    - Simulations through GAN
   
 ** Mentioned in paper 
@@ -247,7 +292,12 @@ results. [fn:3]
    - dimuon invariant mass peak near 125 GeV, only a few GeV wide, determined by
 the experimental muon momentum resolution. In contrast, the background events
 exhibit a smoothly falling mass spectrum in the search region from 110 to 160 GeV
-     
+** Flavor tagging:
+   Heavy quarks decay weakly
+in a matter of picoseconds, which is sufficient time for a highly boosted quark to travel
+roughly a centimeter from the interaction point. Due to this measurable separation, flavor
+tagging relies heavily on tracks reconstructed by high-granularity sensors near the interac-
+tion point, and on vertices fit to these tracks.
 * Bibliography                                                      :B_frame:
   :PROPERTIES:
   :BEAMER_env: frame
@@ -257,6 +307,12 @@ exhibit a smoothly falling mass spectrum in the search region from 110 to 160 Ge
   bibliography:~/Dropbox/bib/Phy599.bib
 
 * Footnotes                                    
+
+[fn:12] cite:Goodfellow-et-al-2016 
+
+[fn:11] cite:Sadowski2014 
+
+[fn:10] cite:Guest2018 
 
 [fn:3] cite:Chatrchyan2012 
 
