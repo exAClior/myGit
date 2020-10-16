@@ -14,7 +14,7 @@
 #+COLUMNS: %40ITEM %10BEAMER_env(Env) %9BEAMER_envargs(Env Args) %4BEAMER_col(Col) %10BEAMER_extra(Extra)
 
 
-* Motivation: How do you find a needle in a haystack?
+* Motivation: How to find a needle in a haystack?
 
 ** Naively
 
@@ -24,7 +24,7 @@
 
        vehemently_move_your_hand();
        if(needle_stick_in_hand){
-	 cout << "hurray I found the needle" << endl;
+	 cout << "hurray I found the needle!!" << endl;
 	 return 0;
        }
 
@@ -34,22 +34,24 @@
 ** A better way?
    
    #+BEGIN_SRC c++ 
-     get_a_magent();
+     get_a_magnet();
      use_the_magnet();
    #+END_SRC
 
-** Magnet is Machine Learning
+** Are we not going to talk about ML
    - Is it really a black box?
-   - But surely you don't know why it works.
-   - Not a rigorous algorithm
+   - But surely you don't know how it works
+   - Not an algorithm in the traditional sense
    - There needs to be an invariant over some state that is related to our
-     problem [[http://web.cs.ucla.edu/~pouchet/lectures/doc/888.11.algo.6.pdf][link to where I got this]]
-   - Boring, but that's what's awesome about Machine Learning
+     problem [fn:7]
+   - Machine Learning don't need all that!
      
 ** Large Amount of Data [fn:2]
-   - It is costly to develop new algorithm
-   - Over abundance of data
    - Hard and costly for humans to find the pattern
+   - It is hard to develop new algorithms
+   - Over abundance of data
+   - LHC generates one billion events and three petabytes of data cite:Chen2015
+     
 * Find a concrete example for the needle: Higgs
 ** Higgs Boson (naively) [fn:1]
    - Last elementary particle in the SM to be observed
@@ -103,6 +105,7 @@
    - Did not see that in experiments
    - Similar things could be explained with a much easier theory of Higgs, why
      not take that :)
+     
 * Time to carry out the experiment   
 ** What more do we know about the Higgs [fn:3]
    - Know the rough range of mass
@@ -110,65 +113,119 @@
    - Electroweak Measurement says it is  < 152 GeV
    - LEP Collider says it shoud be > 114.4 GeV
    - Final search region was between 110 GeV and 140 GeV at ATLAS
-** Decay Channels
-** What haystack?
-   - what are the back ground noise?
-   - What are the information that we can get?
-** Challanges
-   - Why is it difficults
-* How does the experiment work?
-  - describe how the experiment works and diverge to the machine learning part
-    when we hit the obstacle of trying to find what we want to see
-* How the magnet works?
-  -mix the information about machine learning here.
-** BDT
-** Artificial Neural Networks
-* Machine Learning Vocabs
-** Decision Trees cite:geeksforgeeks_2019
+** How do we produce the particles? [fn:3]
+   - Collide two protons with center of mass energy $\sqrt{s} = 7 and 8 TeV$
+   - Four decay channels
+   - Event generators are used to give you expectation of what events you will
+     see
+   - But there might be in-time / out-of-time pile-up [fn:8]
+   - Simulations calculated according to our assumed theoretical model (Monte Carlo)
+   - What are measured
+** Measurement devices [fn:8]
+   - Tracking detector measures the position
+   - Calorimeters measure the energy
+           #+ATTR_LATEX: :width=0.9\textwidth  
+	   [[~/myGit/phy599/Device.png]]
+** Needles and hay [fn:8]
+   - Z boson plus jets make up most of the background
+   - Decay of them gives high transverse momentum leptons
+   - Decay of Higgs also gives high transverse momentum leptons!! Bummer!
+   - Leptons from different source procedures are said to be from different jets
+   - We have now turned a physics problem into a classification problem
+* Machine Learning Comes in
+** Decision Tree [fn:9]
    - Can be used to assign data to class
+   - Weak Learners
          #+ATTR_LATEX: :width=0.9\textwidth  
 	 [[~/myGit/phy599/Decision_Tree.png]]
-** Boosted Decision Tree (BDT) cite:Bourilkov2019
-   - Convert weak to strong learner ?
+** How to build it?
+   - Supervised Learning
+   - Provide set of data with labels
+   - Start with no branches
+   - Populate branches with varying leaf weights
+   - Progress towards a good tree
+** Determining how good a tree is
+   - Training loss: mean squared error
+   - $L(\theta) = \sum_i (y_i - \hat{y_i})$
+   - Regularization term: how complex the model is
+** In our context [fn:8]
+         #+ATTR_LATEX: :width=0.9\textwidth  
+	 [[~/myGit/phy599/EventSelection.png]]
+   
+** Boosted Decision Tree [fn:9]
+   - Not the decision tree on steroids
+   - Collection of Decision Trees
+           #+ATTR_LATEX: :width=0.9\textwidth  
+	   [[~/myGit/phy599/Boosted_DT.png]]
+	   
+     
+** How to improve [fn:9]
+   - Add new trees into the collection that will make the result closer to the
+     labeling
+   - The new labeling should decrease the objective function
+      
+** In the LHC experiment [fn:3]
+   - Different kinematic variables are used
+   - Transverse Momentum of dimuon pair, muon pseudorapidity ......
+   - Training set data, testing set data, and finally final measurement set data
+     
+** Not so raw data you are expected to see
+         #+ATTR_LATEX: :width 0.9\textwidth  :height 0.7\textheight
+	 [[~/myGit/phy599/CMS_momentum.png]]
+** More invariant mass distribution
+         #+ATTR_LATEX: :width 0.9\textwidth  :height 0.7\textheight
+	 [[~/myGit/phy599/ATLAS_small.png]]
+** Large Contribution
+         #+ATTR_LATEX: :width 0.9\textwidth  :height 0.7\textheight
+	 [[~/myGit/phy599/ATLAS_large.png]]
+
+** Gif that you should not miss
+   [[http://opendata.atlas.cern/books/current/openatlasdatatools/_book/atlas_higgs_animations.html][Gif]]
+
+* Alternative towards BDT: Neural Networks
+  
+** Pros and Cons
+   - BDT is not so black boxy
+   - Structure of the Decision Trees Made it much harder to learn and optimize
+   - Neural Networks has more "power" in terms of classification [fn:2]
+
 ** Artificial Neural Networks
    - Layers of nodes
    - Weighted inputs and nonlinear transformation
    - rectified linear unit (ReLU)
    - Hidden Layers : Deep Learning
+
+** What it looks like
+         #+ATTR_LATEX: :width=0.9\textwidth  
+	 [[~/myGit/phy599/NeuralNetwork.png]]
+
 ** Optimizing the model
    - Evaluating a cost for model
    - Minimize the cost through evolution of model
    - Backpropogation (chain rules)
    - Stochastic Gradient Descent
-* Machine Learning Examples:
-  - Higgs Boson 2012
-  - boosted decision tree
-  - small signals (invariant mass peaks) over large smoothly falling
-backgrounds
-** Little bit of physics behind it
-   -then the Higgs decays and couplings to the heavy W and Z
-gauge bosons, as well as the heavy third generation quarks (bottom and top) and
-tau leptons, have been observed by both ATLAS and CMS, and are consistent with
-the predictions of the SM at the current level of precision
-** What to look for
-   - observing Higgs decays and measuring its couplings to fermions outside the third generation
-   - decays to a pair of muons with oppotiste change ($\mu^{+}$,$\mu^{-}$)
-   - But this only occurs with small probablility 0.02% ( other possibilities
-     are Drell-Yan, top quark or W boson pairs production)
-   - dimuon invariant mass peak near 125 GeV, only a few GeV wide, determined by
-the experimental muon momentum resolution. In contrast, the background events
-exhibit a smoothly falling mass spectrum in the search region from 110 to 160 GeV
 
-* Quantum Computers to save the day? (The challanges and outlooks)
+
+
+* The challanges and letouts
+** Left outs
+   - Much more Machine Learning could do
+   - Effectively increse luminosity
+   - Ultrafast processing
+   - Simulations through GAN
+  
 ** Mentioned in paper 
   
-  -The large amounts of data collected at colliders like the Large Electron-Positron
+  - The large amounts of data collected at colliders like the Large Electron-Positron
 collider (LEP) or the LHC, and at the intensity frontier, mean that the statistical
 errors on the collected data samples tend to get quite small, and often the systematic
 effects become important and even limiting. Experience shows that a large, often
 dominating amount of time in data analysis is spent on estimating and handling
-the systematic errors, after the express production of first, exploratory, results.
-  - scultping of variables , what does it mean?
+the systematic errors, after the express production of first, exploratory,
+results. [fn:3]
+  - How to choose the structure of the neural networks
+  - Parameter Tuning
+    
 * Backups
 ** Three Quaters of the Higgs Boson? [fn:4]
    - When we detected W and Z bosons, we have really detected the three quarters
@@ -182,6 +239,14 @@ the systematic errors, after the express production of first, exploratory, resul
      degree of freedom."
    - The Higgs breaks the electroweak symmetry for the weak charge that it had
    - The vacuum expectation values allows the three to be eaten
+** What to look for [fn:3]
+   - observing Higgs decays and measuring its couplings to fermions outside the third generation
+   - decays to a pair of muons with oppotiste change ($\mu^{+}$,$\mu^{-}$)
+   - But this only occurs with small probablility 0.02% ( other possibilities
+     are Drell-Yan, top quark or W boson pairs production)
+   - dimuon invariant mass peak near 125 GeV, only a few GeV wide, determined by
+the experimental muon momentum resolution. In contrast, the background events
+exhibit a smoothly falling mass spectrum in the search region from 110 to 160 GeV
      
 * Bibliography                                                      :B_frame:
   :PROPERTIES:
@@ -191,10 +256,7 @@ the systematic errors, after the express production of first, exploratory, resul
   bibliographystyle:abbrv
   bibliography:~/Dropbox/bib/Phy599.bib
 
-* Footnotes                                                         :B_frame:
-  :PROPERTIES:
-  :BEAMER_env: frame
-  :END:
+* Footnotes                                    
 
 [fn:3] cite:Chatrchyan2012 
 
@@ -204,7 +266,11 @@ the systematic errors, after the express production of first, exploratory, resul
 
 [fn:4] cite:tanedo
 
-* Footnotes
+[fn:9] cite:Chen:2016:XST:2939672.2939785 
+
+[fn:8] [[http://opendata.atlas.cern/books/current/openatlasdatatools/_book/atlas_events.html][ATLAS Gitbook]] 
+
+[fn:7] cite:cormen_2009 
 
 [fn:6] cite:tanedo 
 
