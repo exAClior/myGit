@@ -14,7 +14,7 @@
 #+COLUMNS: %40ITEM %10BEAMER_env(Env) %9BEAMER_envargs(Env Args) %4BEAMER_col(Col) %10BEAMER_extra(Extra)
 
 
-* Motivation: How to find a needle in a haystack?
+* Motivation: Needle in a haystack
 
 ** Naively
 
@@ -33,75 +33,55 @@
   
 ** A better way?
    
-   #+BEGIN_SRC c++ 
-     get_a_magnet();
-     use_the_magnet();
+   #+BEGIN_SRC c++
+     int main(){
+       get_a_magnet();
+       use_the_magnet();
+       return 0;
+     }
    #+END_SRC
 
 ** Black Magic
-   #+BEGIN_SRC c++ 
-      accio_needle();
+   
+   #+BEGIN_SRC python
+     def main():
+       accio_needle()
    #+END_SRC
 
 ** Are we not going to talk about ML
+   
    - Is it really a black box?
-   - But surely you don't know how it works
+   - But surely you don't know how it works!
    - Not an algorithm in the traditional sense
    - There needs to be an invariant over some state that is related to our
-     problem [fn:7]
+     problem cite:cormen_2009
    - Machine Learning don't need all that!
      
-** Large Amount of Data [fn:2]
+** Large Amount of Data cite:Bourilkov2019
    - Hard and costly for humans to find the pattern
    - It is hard to develop new algorithms
    - Over abundance of data
    - LHC generates one billion events and three petabytes of data cite:Chen2015
      
-* Find a concrete example for the needle: Higgs
-** Higgs Boson (naively) [fn:1]
+* Absolute minimium about the needle: Higgs!
+  
+** Higgs Boson (naively) cite:Aad2012
    - Last elementary particle in the SM to be observed
    - Mechanicsm that gives mass to massive elementary particles predicts its
      existence.
    - But is it really necessary?
-** Higgs Boson (closely) [fn:5]
-   - Unification of the electromagnetic and weak force
-   - Four force particles involved -> $W^{\pm}$, Z, and photon gauge bosons
-   - Threee of the four annexes three Bosons and "breaks" this symmetry
-   - What breaks it? Vacuum Expectation Value
-**  VEV [fn:5]
-   - Whether $\phi=0$
-   - Field vs. Potential
-     #+ATTR_LATEX: :width=0.9\textwidth  
-     [[~/myGit/phy599/BoringPotential.png]]
      
-**  VEV [fn:5]
-   - Higgs is special!
-   - Field is not zero when potential is lowest!
-           #+ATTR_LATEX: :width=0.9\textwidth  
-	   [[~/myGit/phy599/Higgs-Potential-lookdown.png]]
-	   
-**  VEV [fn:5]
-   - Breaks the rotation symmetry
-   - Similarily for electroweak symmetry
-   - One of the four Higgs obtains non-zero vev
-           #+ATTR_LATEX: :width=0.7\textwidth :height=0.7\textheight  
-	   [[~/myGit/phy599/Higgs-Potential-Goldstone.png]]
-	   
-**  Goldstone and Higgs Bosons [fn:6]
-   - Excitation in different direction -> different Bosons
-   - non-flat direction -> this boson has mass
-           #+ATTR_LATEX: :width=0.9\textwidth  
-	   [[~/myGit/phy599/Higgs-Potential-radial.png]]
+
 
 	   
-**  But you still did not tell me why [fn:6]
+**  But you still did not tell me why cite:tanedo
    - The Higgs is needed for the probability to work out if you don't change
      anything about the theory
            #+ATTR_LATEX: :width=0.9\textwidth  
 	   [[~/myGit/phy599/unitarization.png]]
      
    
-** What if you change the theory? [fn:6]
+** What if you change the theory? cite:tanedo
    - The theory becomes non-perturbative
    - We need to introduce more internal virtual particles during a scattering
      process
@@ -112,33 +92,33 @@
      not take that :)
      
 * Time to carry out the experiment   
-** What more do we know about the Higgs [fn:3]
+** What more do we know about the Higgs cite:Chatrchyan2012
    - Know the rough range of mass
    - General Consideration is for it to be smaller than ~ 1 TeV
    - Electroweak Measurement says it is  < 152 GeV
    - LEP Collider says it shoud be > 114.4 GeV
    - Final search region was between 110 GeV and 140 GeV at ATLAS
-** How do we produce the particles? [fn:3]
-   - Collide two protons with center of mass energy $\sqrt{s} = 7 and 8 TeV$
+** How do we produce the particles? cite:Chatrchyan2012
+   - Collide two protons with center of mass energy $\sqrt{s} = 7$ and $8 TeV$
    - Four decay channels
    - Event generators are used to give you expectation of what events you will
      see
-   - But there might be in-time / out-of-time pile-up [fn:8]
+   - But there might be in-time / out-of-time pile-up cite:atlas
    - Simulations calculated according to our assumed theoretical model (Monte Carlo)
    - What are measured
-** Measurement devices [fn:8]
+** Measurement devices cite:atlas
    - Tracking detector measures the position
    - Calorimeters measure the energy
            #+ATTR_LATEX: :width=0.9\textwidth  
 	   [[~/myGit/phy599/Device.png]]
-** Needles and hay [fn:8]
+** Needle and hay cite:atlas
    - Z boson plus jets make up most of the background
+   - Leptons from different source procedures are said to be from different jets
    - Decay of them gives high transverse momentum leptons
    - Decay of Higgs also gives high transverse momentum leptons!! Bummer!
-   - Leptons from different source procedures are said to be from different jets
    - We have now turned a physics problem into a classification problem
 * Machine Learning Comes in
-** Decision Tree [fn:9]
+** Decision Tree cite:Chen:2016:XST:2939672.2939785
    - Can be used to assign data to class
    - Weak Learners
          #+ATTR_LATEX: :width=0.9\textwidth  
@@ -153,38 +133,28 @@
    - Training loss: mean squared error
    - $L(\theta) = \sum_i (y_i - \hat{y_i})$
    - Regularization term: how complex the model is
-** In our context [fn:8]
+** In our context cite:atlas
          #+ATTR_LATEX: :width=0.9\textwidth  
 	 [[~/myGit/phy599/EventSelection.png]]
    
-** Boosted Decision Tree [fn:9]
+** Boosted Decision Tree cite:Chen:2016:XST:2939672.2939785
    - Not the decision tree on steroids
    - Collection of Decision Trees
            #+ATTR_LATEX: :width=0.9\textwidth  
 	   [[~/myGit/phy599/Boosted_DT.png]]
 	   
      
-** How to improve [fn:9]
-   - Add new trees into the collection that will make the result closer to the
-     labeling
+** How to improve cite:Chen:2016:XST:2939672.2939785
+   - Add new trees into the collection that will make the result closer to
+     correct classification
    - The new labeling should decrease the objective function
       
-** In the LHC experiment [fn:3]
+** In the LHC experiment cite:Chatrchyan2012
    - Different kinematic variables are used
    - Transverse Momentum of dimuon pair, muon pseudorapidity ......
    - Training set data, testing set data, and finally final measurement set data
      
-** Not so raw data you are expected to see
-         #+ATTR_LATEX: :width 0.9\textwidth  :height 0.7\textheight
-	 [[~/myGit/phy599/CMS_momentum.png]]
-** More invariant mass distribution
-         #+ATTR_LATEX: :width 0.9\textwidth  :height 0.7\textheight
-	 [[~/myGit/phy599/ATLAS_small.png]]
-** Large Contribution
-         #+ATTR_LATEX: :width 0.9\textwidth  :height 0.7\textheight
-	 [[~/myGit/phy599/ATLAS_large.png]]
-
-** Gif that you should not miss
+** Gif that you should not miss 
    [[http://opendata.atlas.cern/books/current/openatlasdatatools/_book/atlas_higgs_animations.html][Gif]]
 
 * Alternative towards BDT: Shallow Neural Networks
@@ -192,52 +162,72 @@
 ** Pros and Cons
    - BDT is not so black boxy
    - Structure of the Decision Trees Made it much harder to learn and optimize
-   - Neural Networks has more "power" in terms of classification [fn:2]
+   - Neural Networks has more "power" in terms of classification cite:Bourilkov2019
 
 ** Artificial Neural Networks
    - Layers of nodes
    - Weighted inputs and nonlinear transformation
-   - rectified linear unit (ReLU)
+   - Activation functions
+   - rectified linear unit (ReLU) or sigmoid
+           #+ATTR_LATEX: :width 0.4\textwidth :height 0.4\textheight  
+	   [[~/myGit/phy599/SNN.png]] cite:Lecun2015
 
 ** Optimizing the model
-   - Evaluating a cost for model
-   - Minimize the cost through evolution of model
-   - Different learning rate
+   - Evaluating a cost for model and let the model evolve
    - Backpropogation (chain rules)
    - Stochastic Gradient Descent
-
+           #+ATTR_LATEX: :width 0.6\textwidth :height 0.6\textheight  
+	   [[~/myGit/phy599/SSNbp.png]] cite:Lecun2015
+	   
 * The Next Step: Deep Learning
+  
 ** Deep Neural Network
-         #+ATTR_LATEX: :width=0.9\textwidth  
+         #+ATTR_LATEX: :width 0.9\textwidth  
 	 [[~/myGit/phy599/NeuralNetwork.png]]
-** Difference between Deep and Shallow NN [fn:10]
+** Difference between Deep and Shallow NN cite:Guest2018
    - Effectiveness is the same
    - Many more hidden layers
    - Number of nodes might explode for the shallow NN
-   - Different parameters were used in Shallow vs. Deep Neurual Networks [fn:11]
-	 
-** Autoencoder [fn:12]
+   - Different parameters were used in Shallow vs. Deep Neurual Networks
+     cite:Sadowski2014
+   - Shallow NN needs processing of "raw" data to get physically "meaningful"
+     parameters as its input
+** Autoencoder cite:Goodfellow-et-al-2016
    - Copies imperfectly the input as the output 
    - Feed its output to another NN
-   - Also solves the vanishing gradient problem
+   - Solves the vanishing gradient problem via unsupervised learning of layers
+     of data
      
-** On a higher level [fn:12]
+** On a higher level cite:Guest2018
    - DNN is modular and hierarchical
    - Different modules are focus on different part of the data
-  
-** Physical example [fn:12]
+   - Relies on the "raw" data to have hierarchical intrinsic properties
+
+     
+** Put words into pictures cite:Lecun2015
+         #+ATTR_LATEX: :width 0.9\textwidth  
+	 [[~/myGit/phy599/DNN.png]]
+	 
+** Physical examples cite:Guest2018
    - Typical events are made up of jets
    - Jets are made up of hardons
-   - Hardons gives info on tracker and calorimeter
+   - Hardons gives info on trackers and calorimeters
      
-** On a more detailed level [fn:12]
+** On a more detailed level cite:Goodfellow-et-al-2016
    - Convolutional filter -> extracts the local features 
    - Pooling layer -> summarizes the local features by taking the max or average
      of the previous layer
      
-* Example for the Higgs
-  
-** Jet Identification [fn:12]
+* Example for the Higgs and related
+** Higgs Identification cite:Apostolatos
+   - Using $\eta$ and $\phi$
+           #+ATTR_LATEX: :width 0.9\textwidth :height 0.8\textwidth  
+	   [[~/myGit/phy599/etaandphi.png]]
+
+** What neural network was used cite:Apostolatos
+           #+ATTR_LATEX: :width 0.9\textwidth :height 0.8\textheight  
+	   [[~/myGit/phy599/DNNHiggs.png]]
+** Jet Identification cite:Guest2018
    - Differentiate Jets from W, Z , H Bosons, quarks, and gluons
    - Traditionally done with flavor tagging and jet substructure tagging
    - Resembles human created algorithms that tells us which is which based on
@@ -247,32 +237,74 @@
    - Feed the data into DNN, let it do the grouping for us.
 
      
-** Results [fn:12]
+** Results cite:Guest2018
+   
    - factor of 4 improvement
            #+ATTR_LATEX: :width 0.7\textwidth :height 0.7\textheight  
 	   [[~/myGit/phy599/DNNimprove.png]]
 
-* The challanges and letouts
-** Left outs
+** Things to take home
+   - Relying on DNN is like asking a quesiton and getting an answer in a
+     language that you don't understand. But the final result is written down in formulas.
+
+
+* The challanges and leftouts
+  
+** Leftouts
    - Much more Machine Learning could do
    - Effectively increse luminosity
    - CNN auto detection of features
    - Simulations through GAN
   
-** Mentioned in paper 
+** Challanges 
   
-  - The large amounts of data collected at colliders like the Large Electron-Positron
-collider (LEP) or the LHC, and at the intensity frontier, mean that the statistical
-errors on the collected data samples tend to get quite small, and often the systematic
-effects become important and even limiting. Experience shows that a large, often
-dominating amount of time in data analysis is spent on estimating and handling
-the systematic errors, after the express production of first, exploratory,
-results. [fn:3]
+  - The large amounts of data collected at colliders like the Large
+    Electron-Positron collider (LEP) or the LHC, and at the intensity frontier,
+    mean that the statistical errors on the collected data samples tend to get
+    quite small, and often the systematic effects become important and even
+    limiting. Experience shows that a large, often dominating amount of time in
+    data analysis is spent on estimating and handling the systematic errors,
+    after the express production of first, exploratory, results. cite:Chatrchyan2012
   - How to choose the structure of the neural networks
   - Parameter Tuning
     
 * Backups
-** Three Quaters of the Higgs Boson? [fn:4]
+  
+** More examples
+         #+ATTR_LATEX: :width 0.9\textwidth :height 0.8\textheight 
+	 [[~/myGit/phy599/EventSele.png]]
+** Higgs Boson (closely) cite:tanedo
+   - Unification of the electromagnetic and weak force
+   - Four force particles involved -> $W^{\pm}$, Z, and photon gauge bosons
+   - Threee of the four annexes three Bosons and "breaks" this symmetry
+   - What breaks it? Vacuum Expectation Value
+**  VEV cite:tanedo
+   - Whether $\phi=0$
+   - Field vs. Potential
+     #+ATTR_LATEX: :width=0.9\textwidth  
+     [[~/myGit/phy599/BoringPotential.png]]
+     
+**  VEV cite:tanedo
+   - Higgs is special!
+   - Field is not zero when potential is lowest!
+           #+ATTR_LATEX: :width=0.9\textwidth  
+	   [[~/myGit/phy599/Higgs-Potential-lookdown.png]]
+	   
+**  VEV cite:tanedo
+   - Breaks the rotation symmetry (see by rotation)
+   - Similarily for electroweak symmetry
+   - One of the four Higgs obtains non-zero vev
+           #+ATTR_LATEX: :width=0.7\textwidth :height=0.7\textheight  
+	   [[~/myGit/phy599/Higgs-Potential-Goldstone.png]]
+	   
+** Goldstone and Higgs Bosons cite:tanedo
+   - Excitation in different direction -> different Bosons
+   - non-flat direction -> this boson has mass
+           #+ATTR_LATEX: :width=0.9\textwidth  
+	   [[~/myGit/phy599/Higgs-Potential-radial.png]]
+	  
+  
+** Three Quaters of the Higgs Boson? cite:tanedo
    - When we detected W and Z bosons, we have really detected the three quarters
      of Higgs Boson.
    - W and Z Bosons absorbed them to become massive
@@ -284,7 +316,17 @@ results. [fn:3]
      degree of freedom."
    - The Higgs breaks the electroweak symmetry for the weak charge that it had
    - The vacuum expectation values allows the three to be eaten
-** What to look for [fn:3]
+
+** Not so raw data you are expected to see cite:atlas
+         #+ATTR_LATEX: :width 0.9\textwidth  :height 0.7\textheight
+	 [[~/myGit/phy599/CMS_momentum.png]]
+** More invariant mass distribution cite:atlas
+         #+ATTR_LATEX: :width 0.9\textwidth  :height 0.7\textheight
+	 [[~/myGit/phy599/ATLAS_small.png]]
+** Large Contribution cite:atlas
+         #+ATTR_LATEX: :width 0.9\textwidth  :height 0.7\textheight
+	 [[~/myGit/phy599/ATLAS_large.png]]
+** What to look for cite:Chatrchyan2012
    - observing Higgs decays and measuring its couplings to fermions outside the third generation
    - decays to a pair of muons with oppotiste change ($\mu^{+}$,$\mu^{-}$)
    - But this only occurs with small probablility 0.02% ( other possibilities
@@ -292,42 +334,19 @@ results. [fn:3]
    - dimuon invariant mass peak near 125 GeV, only a few GeV wide, determined by
 the experimental muon momentum resolution. In contrast, the background events
 exhibit a smoothly falling mass spectrum in the search region from 110 to 160 GeV
-** Flavor tagging:
-   Heavy quarks decay weakly
-in a matter of picoseconds, which is sufficient time for a highly boosted quark to travel
-roughly a centimeter from the interaction point. Due to this measurable separation, flavor
-tagging relies heavily on tracks reconstructed by high-granularity sensors near the interac-
-tion point, and on vertices fit to these tracks.
-* Bibliography                                                      :B_frame:
-  :PROPERTIES:
-  :BEAMER_env: frame
-  :END:
-  
+** Flavor tagging: cite:Guest2018
+   Heavy quarks decay weakly in a matter of picoseconds, which is sufficient
+   time for a highly boosted quark to travel roughly a centimeter from the
+   interaction point. Due to this measurable separation, flavor tagging relies
+   heavily on tracks reconstructed by high-granularity sensors near the interaction
+   point, and on vertices fit to these tracks.
+
+* References
+ :PROPERTIES:
+ :BEAMER_opt: fragile,allowframebreaks,label=
+ :END:
+   
+
   bibliographystyle:abbrv
   bibliography:~/Dropbox/bib/Phy599.bib
 
-* Footnotes                                    
-
-[fn:12] cite:Goodfellow-et-al-2016 
-
-[fn:11] cite:Sadowski2014 
-
-[fn:10] cite:Guest2018 
-
-[fn:3] cite:Chatrchyan2012 
-
-[fn:2] cite:Bourilkov2019 
-
-[fn:1] cite:Aad2012
-
-[fn:4] cite:tanedo
-
-[fn:9] cite:Chen:2016:XST:2939672.2939785 
-
-[fn:8] [[http://opendata.atlas.cern/books/current/openatlasdatatools/_book/atlas_events.html][ATLAS Gitbook]] 
-
-[fn:7] cite:cormen_2009 
-
-[fn:6] cite:tanedo 
-
-[fn:5] cite:tanedo 
