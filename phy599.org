@@ -192,17 +192,17 @@
      cite:Sadowski2014
    - Shallow NN needs processing of "raw" data to get physically "meaningful"
      parameters as its input
+
+** On a higher level cite:Guest2018
+   - DNN is modular and hierarchical
+   - Different modules are focus on different part of the data
+   - Relies on the "raw" data to have hierarchial intrinsic properties
+   
 ** Autoencoder cite:Goodfellow-et-al-2016
    - Copies imperfectly the input as the output 
    - Feed its output to another NN
    - Solves the vanishing gradient problem via unsupervised learning of layers
      of data
-     
-** On a higher level cite:Guest2018
-   - DNN is modular and hierarchical
-   - Different modules are focus on different part of the data
-   - Relies on the "raw" data to have hierarchical intrinsic properties
-
      
 ** Put words into pictures cite:Lecun2015
          #+ATTR_LATEX: :width 0.9\textwidth  
@@ -221,7 +221,7 @@
 * Example for the Higgs and related
 ** Higgs Identification cite:Apostolatos
    - Using $\eta$ and $\phi$
-           #+ATTR_LATEX: :width 0.9\textwidth :height 0.8\textwidth  
+           #+ATTR_LATEX: :width 0.9\textwidth :height 0.8\textheight  
 	   [[~/myGit/phy599/etaandphi.png]]
 
 ** What neural network was used cite:Apostolatos
@@ -235,8 +235,12 @@
    - We identified useful information, but did we throw away some hidden
      information when we group the jets this ways?
    - Feed the data into DNN, let it do the grouping for us.
-
-     
+** Raw parameters cite:Sadowski2014
+         #+ATTR_LATEX: :width 0.9\textwidth  :height 0.4\textheight
+	 [[~/myGit/phy599/rawparameters.png]]
+** High level parameters cite:Sadowski2014
+         #+ATTR_LATEX: :width 0.6\textwidth :height 0.6\textheight  
+	 [[~/myGit/phy599/highlevel.png]]
 ** Results cite:Guest2018
    
    - factor of 4 improvement
@@ -347,6 +351,6 @@ exhibit a smoothly falling mass spectrum in the search region from 110 to 160 Ge
  :END:
    
 
-  bibliographystyle:abbrv
+  bibliographystyle:apalike
   bibliography:~/Dropbox/bib/Phy599.bib
 
